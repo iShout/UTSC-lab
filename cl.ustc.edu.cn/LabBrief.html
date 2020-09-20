@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>实验室概况</title>
+    <link href="./MDB/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="./MDB/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="./MDB/css/style.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+</head>
+<body class="background">
+    <!--导航栏-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+
+    <!-- Logo -->
+   <img src="./images/utsc.png" alt="UTSC" style="width: 60px; height: 60px; margin-right: 30px;">
+  
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="index2.html" style="font-size: large; font-weight: bold; margin-right: 20px;">主页</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="LabBrief.html" style="font-size: large; font-weight: bold; margin-right: 20px;">实验室概况</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="MemberIntro.html" style="font-size: large; font-weight: bold; margin-right: 20px;">成员介绍</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="AcaAchievement.html" style="font-size: large; font-weight: bold; margin-right: 20px;">学术成果</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Cooperation.html" style="font-size: large; font-weight: bold; margin-right: 20px;">交流合作</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Lectures.html" style="font-size: large; font-weight: bold; margin-right: 20px;">课程教学</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Links.html" style="font-size: large; font-weight: bold; margin-right: 20px;">相关链接</a>
+        </li>
+    </ul>
+ </nav>
+
+<!-- 返回首页按钮 -->
+ <!-- <button type="button" class="btn btn-light-blue totop" onclick="returnTop()">回到顶部</button> -->
+ <i class="fas fa-arrow-circle-up fa-3x blue-text totop" onclick="returnTop()"></i>
+ <!-- 内容-->
+<div class="jumbotron text-center col-md-8" id="lab_brief_card">
+    
+    <h4 class="card-title h4 pb-2 " style="display: inline-block;" id="basic_info"><strong>基本信息</strong></h4>
+    <h4 class="card-title h4 pb-2 " style="display: inline-block;" id="rsrch_topic"><strong>研究课题</strong></h4>
+    <h4 class="card-title h4 pb-2 " style="display: inline-block;" id="tutor_intro"><strong>导师介绍</strong></h4>
+<!-- 基本信息内容 -->
+<div id="basic_info_content">
+    <div id="basic_info_pic" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+         <div class="view overlay zoom">
+          <div class="carousel-item active">
+            <img class="d-block w-50 rounded mx-auto" src="./images/instrament1.JPG">
+            <div class="mask flex-center">
+            <p class="white-text">微孔板式发光检测仪</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-50 rounded mx-auto" src="./images/instrament2.JPG">
+            <div class="mask flex-center">
+                <p class="white-text">超微弱生物化学发光仪</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-50 rounded mx-auto" src="./images/instrament3.JPG">
+            <div class="mask flex-center">
+                <p class="white-text">台式高速离心机 / 台式高速冷冻离心机</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-50 rounded mx-auto" src="./images/instrament4.JPG">
+            <div class="mask flex-center">
+              <p class="white-text">电化学发光成像系统</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-50 rounded mx-auto" src="./images/instrament5.JPG">
+            <div class="mask flex-center">
+              <p class="white-text">化学发光成像系统</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-50 rounded mx-auto" src="./images/instrament6.JPG">
+            <div class="mask flex-center">
+              <p class="white-text">微孔板式发光检测仪</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-50 rounded mx-auto" src="./images/instrament7.JPG">
+            <div class="mask flex-center">
+              <p class="white-text">化学发光荧光光谱检测仪</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-50 rounded mx-auto" src="./images/instrament8.JPG">
+            <div class="mask flex-center">
+              <p class="white-text">微弱电致化学发光检测仪</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-50 rounded mx-auto" src="./images/instrament9.JPG">
+            <div class="mask flex-center">
+              <p class="white-text">全自动化学发光免疫分析仪</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-50 rounded mx-auto" src="./images/instrament10.JPG">
+            <div class="mask flex-center">
+              <p class="white-text">旋转蒸发仪</p>
+            </div>
+          </div>
+         </div>
+        </div>
+        <a class="carousel-control-prev" href="#basic_info_pic" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon black" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#basic_info_pic" role="button" data-slide="next">
+            <span class="carousel-control-next-icon black" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+    <p class="text-justify p_content" style="margin-top: 20px;">  
+            实验室现位于中国科技大学化学楼311、314、209和208，总面积115平方米。目前的研究团队共有13人，包括由崔华
+        教授指导的四名在读博士研究生、四名硕士研究生（包括三名硕博连读生）和四名本科生，已经形成一支包括各年级，多层次
+        研究人员的科研队伍。
+    </p>
+    <p class="text-justify p_content"> 在过去的七年里，实验室先后培养了十一名博士研究生（其中两人与林祥钦教授合作指导）（孙玉刚、李凤、周建、
+        Aung Myint、张志锋、张群林、于宏晓、万国晖、石明娟、郭吉兆、董永平）、 八名硕士毕业生（李世凤、谢成根、邹桂征、
+        赵晓宇、徐杨、庞永强、王成名、徐胜良）以及十一名本科生（许峰、程佳懿、赖春泽、廉玫、 盼怡兰、高仲栋、吴云龙、周伟、
+        石云波、熊涛、刘丽佳），并接受高级访问学者一名。
+    </p>
+    <p class="text-justify p_content"> 实验室现有的仪器设备包括：电致化学发光系统五套、多维光谱电化学系统一套、CCD光谱/显微成像系统、
+        高效液相色谱－化学发光检测系统二套、流动注射化学发光仪四台。 近两年来先后购进荧光光谱仪（Hitachi,F-7000）、
+        紫外光谱仪（Agilent,UV-8453）、微孔板化学发光仪以及超纯水系统、高速离心机等配套仪器。借助中国科技大学理化实验中
+        心和化学院实验中心平台，本课题组还可方便进行各种物理化学测试和表征实验。
+    </p>
+    <p class="text-justify p_content">
+        实验室先后承担中国科学院“引进海外杰出人才”基金（“百人计划”，2002）、
+        国家自然科学基金杰出青年基金（2007）、国家自然科学基金 面上项目（1999，2004，2006）三项等纵向科研
+        项目，累计研究经费近500万元。已结题项目均受到评审专家的好评。</p>
+    <p class="text-justify p_content">
+        在过去的研究工作中，我们发现电致化学发光的多通道发射现象及其对电极电位、电极材料和电极表面状态等的依
+        赖性，开辟了电位分辨的电致化学发光这一新的研究领域。率先将纳米修饰电极用于电致化学发光的研究，发现了鲁米诺等
+        传统ECL体系在纳米修饰电极上具有优异的ECL特性。发现纳米金可作为能量接受体、微尺度反应平台、还原剂、催化剂等参与液相
+        化学发光反应, 将液相化学发光反应的研究对象从分子、离子体系扩展到金属纳米体系，进一步丰富了人们对微尺度结构材料特
+        殊性质的认识。发现了化学发光与电致化学发光的增强和抑制作用的规律及其与pH、分子结构、溶液浓度等的相关性，发现了C
+        e (IV) - 吐温20等化学发光新体系，据此建立了多种酚类和黄酮类化合物的化学发光分析新方法。</p>
+    <p class="text-justify p_content">
+        本课题组目前的研究方向是化学发光与电化学、色谱、纳米科学的交叉研究及其分析应用。研究课题主要包括：
+        <li class="text-left" style="list-style: none;">
+        <ul>(1) 电位分辨的电致化学发光</ul>
+        <ul>(2) 流动体系的化学发光</ul>
+        <ul>(3) 纳米化学发光与电致化学发光</ul>
+        </li>   
+    </p>
+
+        <p class="text-justify p_content">我们衷心希望并热忱欢迎对本实验室工作感兴趣的同学加入到我们的行列中来
+    </p>
+
+</div>
+
+
+<!-- 研究课题内容 -->
+<div id="rsrch_topic_content">
+<div class="view overlay my-4">
+    <!-- <img src="./images/PlaceHolder3.jpg" class="img-fluid w-75 rounded d-block mx-auto" alt="研究课题"> -->
+    <a href="#">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+  <h5 class="indigo-text h5 mb-4">化学发光与电致化学发光实验室承担课题及研究进展</h5>
+  <p class="text-right" style=" font-size: 10px; color: #CC0033;">注：未经特别说明，本页所有数据及相关信息统计于2007年12月。</p>
+  <p class="text-justify p_content">实验室先后承担中国科学院“引进海外杰出人才”基金（“百人计划”，2002）、国家自然科学基金杰出青年基金（2007）、国家自然科学基金 面上项目（1999，2004，2006）三项等纵向科研项目，累计研究经费近500万元。</p>
+  <table class="table table-striped" id="project_table">
+    <thead>
+      <tr style="background-color: cornflowerblue; color: white;">
+        <th scope="col" style="font-weight: bold;">基金类型</th>
+        <th scope="col" style="font-weight: bold;">项目名称</th>
+        <th scope="col" style="font-weight: bold;">资助金额</th>
+        <th scope="col" style="font-weight: bold;">起止年限</th>
+        <th scope="col" style="font-weight: bold;">进展状况</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <hr>
+  <br>
+  <p class="text-justify p_content">
+    在以上基金的资助下，本小组围绕化学发光与电化学、色谱、纳米科学的交叉研究及其分析应用这一研究方向进行了大量富有成效的研究工作，具体取得的进展有：  </p>
+    <img class="text-center" src="./images/research.png" alt="研究进展" style="width: 70%;">
+    <p> </p>
+      <li class="text-left" style="list-style: none;">
+        <!-- 第一段 -->
+      <ul><strong>一、电位分辨的电致化学发光</strong></ul>
+      <div style="float: left; margin-right: 25px;" >
+          <img src="./images/electrode.jpg" alt="">
+          <p class="text-center" style="font-size:10px;">PRECL电化学池及电极结构图【Ref1】</p>
+      </div>
+      <div>
+      <p class="text-justify p_content">使用循环伏安驱动电致化学发光，发现电位分辨的电致化学发光（PRECL）现象，即在不同的电位下传统的发光物质具有多个ECL反应通道。而脉冲激发的电致化学发光不能分辨这些通道。对鲁米诺，光泽精，联吡啶-钌等经典化学发光体系在各种电极材料上（包括Pt、Au、Cu、玻碳、石墨充蜡、TiO2覆盖的Ti基电极等）的PRECL行为、
+          规律及机理进行了系统研究，发现了鲁米诺，光泽精，联吡啶-钌体系的ECL多通道现象和对电极电位、电极材料和电极表面状态的依赖性，提出了各通道的反应机理。</p>
+      <p class="text-justify p_content">    
+        电位分辨的电致化学发光为电致化学发光的研究提供了一条新的研究思路，开辟了一个新的研究领域，推动了电致化学发光的深入研究。其意义在于：（1）对电致化学发光机理研究和探索新的电致化学发光反应具有重要的意义。（2）电位分辨的电致化学发光图类似于循环伏安扫描图，但比循环伏安扫描图更灵敏，一些氧化还原过程在循环伏安扫描图上无峰或有较弱峰，但在电位分辨的电
+        致化学发光图上可给出清晰的峰，而且在高电位下循环伏安扫描图上有较强的充电电流，使一些氧化还原峰难以观察，而电位分辨的电致化学发光图可观察到这些过程，因此为电极过程及伴随反应的机理研究提供了一个新的高灵敏度的研究手段。（3）通过控制电位，可开发出高灵敏度、高选择性的电致化学发光分析方法，
+        大大扩展电致化学发光分析方法的应用范围。因此，本项研究工作是电致化学发光基础理论研究的一项重要进展。</p>
+        <div style="float: right; margin-left: 25px;">
+            <img src="./images/precl.jpg" alt="">
+            <p style="font-size: 10px;" class="text-center">鲁米诺在石墨充蜡电极上的PRECL曲线及其与CV曲线的比较【Ref1】</p>
+            </div>
+        <p class="text-justify p_content"> 有关上述研究工作的论文先后发表在美国 Anal. Chem. (影响因子5.250)、 J. Electroanal. Chem. (影响因子2.027)等重要杂志上, 审稿人认为：“电致化学发光的多通道发射将是分析科学感兴趣的研究课题之一”。有关工作于2002年4月在英国剑桥大学召开的12th International Symposium on Bioluminescence and Chemiluminescence进
+            行了大会口头报告，受到同行的关注。</p> 
+        <p class="text-justify p_content">
+            [Ref1]:
+            H. Cui*, G.Z. Zou, X.Q. Lin
+            “Electrochemiluminescence of luminol in alkaline solution at a paraffin-impregnated graphite electrode”
+            Anal. Chem. 2003, 75(3), 324-331. (I.F.=5.250)</p>
+            <br>
+            <br>
+        </div>
+      <!-- 第二段 -->
+        <ul><strong>二、纳米修饰电极上的电致化学发光</strong></ul>
+      <div style="float: right; margin-left: 25px;">
+          <img src="./images/CCD.jpg" alt="">
+          <p class="text-center" style="font-size: 10px;">电极发光表面的CCD照片【Ref2】</p>
+      </div>
+      <p class="text-justify p_content">本实验室前期的工作发现鲁米诺等体系的电致化学发光(ECL)反应的多通道性以及对电极材料、电极表面状态和电极电位的依赖性。这些结果表明：通过优化电极的组成和结构，可望获得理想的ECL特性。将纳米修饰电极用于电化学和电分析化学的研究近年来已经取得了很大的进展，各种金属、金属氧化物和非金属氧化物纳米粒子或团簇被组装在各种经典电极材料上如金、铂、银、碳等，显示出卓越的表面吸附和分子
+          识别特性、电催化活性、高度的表面反应活性等。但纳米修饰电极上电致化学发光的研究还鲜为报道。</p>
+        <div style="margin-top: 10px; margin-left: 15%;">
+            <img src="./images/scheme.jpg" alt="">
+            <p style="font-size: 10px;" class="text-center">纳米金修饰金电极的制备流程图【Ref2】</p>
+        </div>
+      <p class="text-justify p_content">最近，本实验室将纳米金组装在各种传统电极材料上，研究了鲁米诺和光泽精等在这些纳米修饰电极上的ECL行为。发现在纳米金修饰的电极上鲁米诺和光泽精的ECL行为不同于各种传统电极上鲁米诺和光泽精的ECL行为，发光强度明显提高，发光通道数增加，重现性和稳定性明显改善，并且电极寿命长，每次测量前电极表面不需要麻烦的预处理，克服了传统电极表面易污染的重要缺陷。此项结果表明：在纳米金修饰的电极上，鲁米诺和光泽精ECL体系检测的灵敏度可大大提高。目前，我们正在利用纳米金修饰的电极上鲁米诺的ECL特性，发展高灵敏度的ECL生物传感器。</p>
+      <p class="text-justify p_content">此项工作进一步丰富了人们对物质在介观状态下特殊性质的认识, 对纳米科学和电致化学发光的基础理论研究具有重要的意义。同时，它将推进纳米技术在分析化学中的应用，扩展电致化学发光分析的应用范围。</p>
+      <p class="text-justify p_content">  此项工作由于明显的创新性，于2003年获得了国家自然科学基金的资助，首篇论文于2004年发表在美国Anal. Chem.上。</p>
+      <!-- 第三段 -->
+      <ul><strong>三、纳米金诱导的液相化学发光</strong></ul>
+      <img src="./images/cl.jpg" alt="" style="float: left; margin-right: 25px;">
+      <p class="text-justify p_content">纳米粒子特殊的光学性质包含着有关纳米粒子能级结构和表面状态等的丰富信息，一直以来都是纳米科学研究的重点之一。目前对于纳米材料光学性质的研究主要包括表面等离子体共振吸收光谱, 表面增强拉曼散射光谱和光致发光等入射光诱导下纳米粒子的光学行为。</p>
+      <p class="text-justify p_content">化学发光是伴随化学反应的光发射现象，研究相关物理化学过程的热力学、动力学和光发射特性具有重要的理论和应用价值。自从1928年Albrecht1观察到鲁米诺在碱性介质中的化学发光行为以来，各种液相化学发光体系包括鲁米诺及其衍生物、吖啶酯、过氧化草酸酯、酸性高锰酸、联吡啶钌和四价铈等的化学发光行为已被广泛研究。但是，对于液相化学发光行为的研究一般仅局限于分子和离子水平以及简单的分子聚集体如胶束和微乳液等。近两年，以半导体纳米粒子作为发光体的电致化学发光和化学发光行为已经引起了人们的关注。</p>
+      <div style="float: right; margin-left: 25px;">
+        <img src="./images/luminol1.jpg" alt="" width="500px" height="400px">
+        <p class="text-center" style="font-size: 10px;">不同粒径纳米金溶胶中鲁米诺－过氧化氢体系发光光谱</p>
+      </div>
+      <p class="text-justify p_content">最近, 我们发现纳米金可作为还原剂、催化剂诱导液相化学发光反应。如纳米金溶胶与KIO4-NaOH/Na2CO3体系反应可观察到较强化学发光，其化学发光光谱显示出三个发光峰，分别对应于单线态氧(490~500nm)，二氧化碳双分子(430~450nm)以及Au(I)中间体(380~390nm, 430~450nm)的发射。相关工作已被美国化学会物理化学杂志发表(J. Phys. Chem. B. 2005, 109, 3099)。在另一工作中，我们研究了纳米金对鲁米诺化学发光反应的影响，发现纳米金对鲁米诺化学发光反应具有良好的催化作用，并具有良好的分析化学应用潜力，相关工作已被美国化学会的分析化学杂志（Anal. Chem.，影响因子5.250）接受。深入的工作正在进行之中。</p>
+      <p class="text-justify p_content">此项工作将液相化学发光反应的研究对象从分子、离子体系扩展到金属纳米体系，为化学发光的研究开辟新的研究方向。它将进一步丰富人们对微尺度结构材料特殊性质尤其是化学反应活性及光学性质的认识,对纳米科学和化学发光的基础理论研究具有重要的意义，为发展新型传感器技术、发光成像技术以及免疫分析技术等奠定了理论基础。</p>
+      <!-- 第四段 -->
+      <ul><strong>四、化学发光新体系的探索</strong></ul>
+      <p class="text-justify p_content"> 尽管人们已发现许多化学反应可产生化学发光， 但大部分化学反应的发光量子产率较低，可用于化学发光分析的化学反应却较少，由此限制了化学发光分析的应用范围。因此，探索新的化学发光反应是目前化学发光分析的重要研究课题之一。我们发现了Ce(IV)+Tween20、Ce(IV)+罗丹明6G+酚类化合物化学发光新体系，提出了其反应机理，建立了多种酚类和黄酮类化合物的高灵敏度化学发光分析新方法。</p>
+      <div style="margin: 20px auto;">
+          <img src="./images/hplc1.jpg" alt="" style="margin-left: 20%; margin-bottom: 5px;">
+          <p style="font-size: 15px;" class="text-center">图为Ce(IV)+Tween20体系高效液相色谱－化学发光检测法联用的流路图。</p>
+      </div>
+      <div style="margin: 20px auto;">
+        <img src="./images/hplc2.gif" alt="" style="margin-left: 20%; margin-bottom: 5px;">
+        <p style="font-size: 15px;" class="text-center">图为一组实际样品应用Ce(IV)+Tween20体系高效液相色谱－化学发光检测法的色谱图。</p>
+    </div>
+      <p class="text-justify p_content" style="clear: both;"> 此项工作为发展宽响应的液相色谱化学发光检测器奠立了重要的基础，在食品安全检测、药物分析、环境监测等领域具有重要的应用前景。关于Ce (IV) + Tween 20体系的首篇论文于2001年发表在Analyst上，2001年5月该篇论文在Analyst上被点击次数进入前10名，排名第三。</p>
+      <!-- 第五段 -->
+      <ul><strong>五、化学发光抑制和增强作用</strong></ul>
+      <p class="text-justify p_content">化学发光和电致化学发光分析可根据参与物与化学发光强度的线性关系对参与物进行测定。 但化学发光与电致化学发光的体系较少，可探测的物种非常有限。对不参与化学反应的物质的测定常根据其对化学发光或电致化学发光反应的抑制和增强作用进行分析。但抑制和增强作用的规律和机理尚不清楚，抑制剂和增强剂的发现常常需要通过反复试验进行摸索。</p>
+      <p class="text-justify p_content">我们率先系统探索了一系列酚类和苯胺类化合物以及氨基酸在各种条件下对鲁米诺-铁氰化钾、鲁米诺-H2O2-Co(II)、鲁米诺-DMSO-OH、鲁米诺-H2O2-IO4-、光泽精-H2O2-Co(II)、Ce(IV)-Tween20等化学发光体系和鲁米诺、Ru(bpy)32+/C2O42-, Ru(bpy)32+/TPA电致化学发光体系的影响，发现一系列酚类和苯胺类化合物以及氨基酸的化学发光与电致化学发光的抑制和增强作用规律及其与分子结构、化合物的浓度、溶液pH的相关性，提出了其化学发光与电致化学发光的抑制和增强作用机理，建立了一系列生物和环境重要的酚类化合物、苯胺类化合物以及氨基酸的流动注射化学发光抑制和增强分析法和同时测定多种化合物的高效液相色谱－化学发光抑制和增强检测法。此项工作对于深入认识化学发光抑制和增强机理具有重要的理论意义，对新的增强剂和抑制剂的发现具有重要的指导意义。与此同时，扩展了化学发光与电致化学发光分析的应用范围，在环境监测、食品分析、药物分析、烟草分析等领域具有重要的应用价值。</p>
+      </li>   
+
+</div>
+
+<!-- 导师介绍内容 -->
+<div id="tutor_intro_content">
+<div class="view overlay my-4">
+    <img src="./images/cui 331-ercun-3.jpg" class="img-fluid" alt="导师介绍" style="width: 30%; margin: 20px auto;">
+      <div class="mask rgba-white-slight"></div>
+  </div>
+  <h3><strong>崔华</strong></h3>
+  <pre style="font-size:large;">教授  博士生导师</pre>
+      <p class="text-justify p_content">崔华，中国科学技术大学化学系教授。2000年入选中国科学院“引进海外杰出人才”， 2006年获国家自然科学基金委“国家杰出青年基金”，2012年获中国化学会“分析化学基础研究梁树权奖”（国内分析化学的最高奖项），2013年获“中国科学院第四届十大杰出妇女”称号，2015年获得中国化学会分析化学专业委员会“中国女分析化学家奖”。2015-2016年任国际生物发光与化学发光理事会成员。另外，目前还担任《Anal. Bioanal. Chem.》Editor以及《ACS sensor》和《分析化学》等杂志编委。主要从事纳米化学发光及其在生物分析中的应用研究。近年来，作为项目负责人先后承担了国家自然基金委国家重大科研仪器研制项目“研究单纳米粒子催化反应的化学发光与光热多功能成像系统”和科技部国家重点研发计划纳米科技专项项目“无标记纳米化学发光新一代体外诊断技术及其在急性心肌梗死快速诊断中的应用”，取得一系列创新性成果。开拓了金属纳米化学发光与电化学发光新领域；发明了发光试剂功能化纳米材料的“直接合成法”，率先合成化学发光试剂/催化剂双功能化新型纳米材料，发现其具有优异的异相化学发光催化特性，发展了高灵敏度的化学发光分析新方法，并将其用于重大疾病相关分析物的检测。相关工作受到国际同行的重要关注，受邀在法国、瑞典召开的16th & 18th International Symposium on Bioluminescence & Chemiluminescence和在法国召开的2nd International Meeting on Electrogenerated Chemiluminescence作大会特邀报告。</p>
+      
+      <h5 class="text-left"><strong>• 研究方向</strong></h5>
+      <p class="text-justify p_content">主要从事纳米化学发光与电致化学发光及其在免疫分析和DNA分析中的应用研究。</p>
+      
+      <h5 class="text-left"><strong>• 教学实践</strong></h5>
+      <p class="text-justify p_content">目前主讲一门研究生课程，并与其他教授合讲两门本科生课程以及一门研究生课程：</p>
+      <li class="text-left" style="list-style: none;">
+          <ul>仪器分析（本科生课程）</ul>
+          <ul>高等分析方法（本科生课程）</ul>
+          <ul>分子光谱分析进展（研究生课程）</ul>
+          <ul>当代分析科学（研究生课程）</ul>
+      </li>
+      
+      <h5 class="text-left"><strong>• 主要学术成绩、创新点及其科学意义 </strong></h5>
+      <p class="text-justify p_content">发现电致化学发光的多通道发射现象及其对电极电位、电极材料和电极表面状态等的依赖性，开辟了电位分辨的电致化学发光这一新的研究领域，推动了电致化学发光的深入研究；率先将纳米修饰电极用于电致化学发光的研究，发现鲁米诺等传统电致化学发光体系在纳米修饰电极上具有优异的电致化学发光特性；发现金属纳米粒子可作为能量接受体、微尺度反应平台、还原剂、催化剂等参与液相化学发光反应，将液相化学发光反应的研究对象从分子、离子体系扩展到金属纳米体系，开发了一系列新的化学发光体系；率先开展了化学发光功能化的金属纳米材料的合成、化学发光特性及其在生物分析中的应用研究，发展了一系列新的、简单的一步合成法，将发光试剂在合成的过程中直接键合到纳米金属的表面，成功制备了鲁米诺等多种发光试剂功能化的金和银纳米新材料，发现其具有良好的化学发光活性，实现了发光分子的富集和信号的放大，在此基础上进一步构建了高灵敏的生物分析探针，发展了一系列基于化学发光功能化纳米探针的免疫分析和DNA分析新方法。这些研究开创了化学发光与电致化学发光新的研究领域，不仅对化学发光、电致化学发光和纳米科学的基础理论研究具有重要的意义，而且在分析化学、生命科学、环境科学领域具有广阔的应用前景。到目前为止，她所领导的课题组已在Anal. Chem.、Chem. Eur. J、 J. Phys. Chem. B & C、 Chem. Comm.、 Biosens. Bioelectron.、Analyst等国际重要化学期刊上发表SCI论文100多篇，受到同行专家的高度关注。</p>
+
+      <h5 class="text-left"><strong>• 代表性论文专著<span style="font-size:xx-small"><a style="text-decoration: none; color:#6495ED;" href="AcaAchievement.html">(查看实验室所有论文)</a></span></strong></h5>
+      <ol class="text-left" id="paper_listofcui">
+
+      </ol>
+      <p class="text-right" style="font-size: 10px;color: #CC0033;">注：未经特别说明，本页所有数据及相关信息统计于2017年11月。</p>
+</div>
+</div>
+
+	 <!-- JQuery -->
+     <script type="text/javascript" src="./MDB/js/jquery-3.4.1.min.js"></script>
+     <!-- Bootstrap tooltips -->
+     <script type="text/javascript" src="./MDB/js/popper.min.js"></script>
+     <!-- Bootstrap core JavaScript -->
+     <script type="text/javascript" src="./MDB/js/bootstrap.min.js"></script>
+     <!-- MDB core JavaScript -->
+     <script type="text/javascript" src="./MDB/js/mdb.min.js"></script>
+
+     <!-- 自定义js -->
+     <script>
+        //  点击基本信息
+         $(function() {
+             $('#basic_info').click(function(){
+                 $('#basic_info').css("color","black")
+                 $('#rsrch_topic').css("color","grey")
+                 $('#tutor_intro').css("color","grey")
+                 $('#basic_info_content').show();
+                 $('#rsrch_topic_content').hide();
+                 $('#tutor_intro_content').hide();
+             })
+         });
+        //  点击研究课题
+        $(function() {
+             $('#rsrch_topic').click(function(){
+                 $('#rsrch_topic').css("color","black")
+                 $('#basic_info').css("color","grey")
+                 $('#tutor_intro').css("color","grey")
+                 $('#rsrch_topic_content').show();
+                 $('#basic_info_content').hide();
+                 $('#tutor_intro_content').hide();
+             })
+         });
+        //  点击导师介绍
+        $(function() {
+             $('#tutor_intro').click(function(){
+                 $('#tutor_intro').css("color","black")
+                 $('#basic_info').css("color","grey")
+                 $('#rsrch_topic').css("color","grey")
+                 $('#tutor_intro_content').show();
+                 $('#rsrch_topic_content').hide();
+                 $('#basic_info_content').hide();
+             })
+         });
+        // 返回页面顶部
+        function returnTop() {
+            var sdelay=0;
+            window.scrollBy(0,-10000);
+            if(document.body.scrollTop>0) { 
+            sdelay= setTimeout('returnTop()',50);
+            };
+        }
+
+        // 将数组数据填入表格
+        var tableData = [
+            {type:'国家自然科学基金',name:'电位分辨的电致化学发光（29875025）',money:'11万元',years:'1999.1-2001.12',state:'已结题'},
+            {type:'中国科学院“引进海外杰出人才”计划',name:' ',money:'200万元',years:'2001.5-2004.',state:'已结题'},
+            {type:'中国科技大学2002年度高水平大学建设重点科研项目',name:'液相色谱/化学发光检测新技术及其在食品安全检测中的应用',money:'6万元',years:'2002.9-2004.9',state:'已结题'},
+            {type:'安徽省自然科学基金项目',name:'食品中多种抗生素残留的液相色谱/化学发光检测新技术（03041303）',money:'5万元',years:'2003.1-2004.12',state:'已结题'},
+            {type:'国家自然科学基金',name:'纳米电致化学发光（20375037）',money:'22万元',years:'2004.1-2006.12',state:'已结题'},
+            {type:'国家自然科学基金',name:'纳米粒子诱导的液相化学发光（20573101）',money:'26万元',years:'2006.1-2008.12',state:'已结题'},
+            {type:'国家自然科学基金杰出青年基金',name:'纳米化学发光及其分析应用（206）',money:'200万元',years:'2007.1-2010.12',state:'已结题'},
+            {type:'国家自然科学基金',name:'基于新型多标记金属纳米探针的结核病化学发光基因诊断新方法的研究',money:'38万元',years:'2011.1-2013.12',state:'在研'},
+            {type:'国家自然科学基金',name:'以发光功能化贵金属纳米材料为基元的纳米适配体组装体的设计及其化学发光传感研究',money:'61万元',years:'2012.1-2015.12',state:'在研'},
+            {type:'梅里埃研究基金',name:'Luminescence Functionalized Nanoprobes for chemiluminescence bioassays',money:'6万欧元',years:'2012.1-2013.12',state:'在研'}
+        ]
+        var tbody = document.getElementById('project_table')
+
+        tableData.forEach(function(value){
+            var tr = document.createElement('tr');
+            tr.innerHTML = '<td>' + value.type + '</td>';
+            tr.innerHTML += '<td>' + value.name + '</td>';
+            tr.innerHTML += '<td>' + value.money + '</td>';
+            tr.innerHTML += '<td>' + value.years + '</td>';
+            tr.innerHTML += '<td>' + value.state + '</td>';
+            tbody.appendChild(tr);
+            });
+
+        // 将数组数据填入列表
+        var listData = [
+        'Y.T Liu, W. S, Q. Li, J.N Shu, L.F. Gao, M.M Ma, W. Wang and H Cui* "Firefly-mimicking intensive and long-lasting chemiluminescence hydrogels". Nature Commun., 2017, 8:1003, DOI: 10.1038/s41467-017-01101-6.',
+        'W.J Kong, X.N Zhao, Q.J Zhu, L.F Gao, and H. Cui*. "Highly Chemiluminescent Magnetic Beads for Label-Free Sensing of 2,4,6-Trinitrotoluene". Anal. chem., 2017, 89 (13), pp 7145–7151.',
+        'Z.L. Han, F. Li, J.N. Shu, L.F. Gao, X.Y. Liu, and H. Cui*, "Acridinium Ester-Functionalized Carbon Nanomaterials: General Synthesis Strategy and Outstanding Chemiluminescence", ACS Appl. Mater. Inter., 2016, 7 (27), 17454-17460.',
+        'Q. Li, F. Li, W. Shen, X.Y. Liu, and H. Cui*, "Lucigenin/Co(tryptophan)2 complex bifunctionalized graphene oxide: facile synthesis and unique chemiluminescence", J. Mater. Chem. C., 2016, 4, 3477-3484.',
+        'G.X. Li, X.X. Yu, D.Q. Liu, X.Y. Liu, F. Li, and H. Cui*, "Label-Free Electro chemiluminescence Aptasensor for 2,4,6-Trinitrotoluene Based on Bilayer Structure of Luminescence Functionalized Graphene Hybrids", Anal. chem., 2015, 87, 10976-10981.',
+        'J.N. Shu, W. Wang, and H. Cui*, "Direct electrochemiluminescence of gold nanoparticles bifunctionalized by luminol analogue–metal complexes in neutral and alkaline media", Chem. Commun., 2015, 51, 11366–11369 (back cover).',
+        'H.L. Zhang, Z.L. Han, X. Wang, F. Li, H. Cui*, D. Yang, and Z.P. Bian, "Sensitive Immunosensor for N-Terminal Pro-brain Natriuretic Peptide Based on N-(Aminobutyl)-N-(ethylisoluminol)-Functionalized Gold Nanodots/Multiwalled Carbon Nanotube Electrochemiluminescence Nanointerface", ACS Appl. Mater. Inter., 2015, 7 (14), 7599-7604.',
+        'X.Y. Liu , Z.L. Han , F. Li , L.F. Gao , G.L. Liang , and H. Cui*, "Highly Chemiluminescent Graphene Oxide Hybrids Bifunctionalized by N-(aminobutyl)-N-(ethylisoluminol)/ Horseradish Peroxidase and Sensitive Sensing of Hydrogen Peroxide", ACS Appl. Mater. Inter., 2015, 7 (33), 18283-18291.',
+        'S.Y. Li , D.Y. Chen , Q.T. Zhou , W. Wang , L.F. Gao , J. Jiang , H.J. Liang , Y.Z. Liu , G.L. Liang , and H. Cui*, "A General Chemiluminescence Strategy for Measuring Aptamer–Target Binding and Target Concentration", Anal. Chem., 2014, 86 (11), 5559–5566.',
+        'M.X. Liu, H.L. Zhang, J.N. Shu, X.Y Liu, F. Li, and H. Cui*, "Gold Nanoparticles Bifunctionalized by Chemiluminescence Reagent and Catalyst Metal Complexes: Synthesis and Unique Chemiluminescence Property", Anal. Chem., 2014, 86 (6), 2857–2861.',
+        'F. Li, Y.Q. Yu, Q. Li, M. Zhou, H. Cui*, "A Homogeneous Signal-On Strategy for the Detection of rpoB Genes of Mycobacterium tuberculosis Based on Electrochemiluminescent Graphene Oxide and Ferrocene Quenching", Anal. Chem., 2014, 86 (3), 1608-1613.',
+        'Y. He , X. He , X.Y. Liu , L.F. Gao , and H. Cui*, "Dynamically tunable chemiluminescence of luminol functionalized silver nanoparticles and its application to protein sensing arrays", Anal. Chem., 2014. 86 (24), 12166 - 12171.',
+        'H.L. Zhang and H. Cui*, "High-density assembly of chemiluminescence functionalized gold nanodots on multiwalled carbon nanotubes and their application as biosensing platforms", Nanoscale, 2014, 6(5), 2563 - 2566.',
+        'L.F. Gao, H.L. Zhang, H. Cui*, "A general strategy to prepare homogeneous and reagentless GO/lucigenin&enzyme biosensors for detection of small biomolecules", Biosens. Bioelectron., 2014, 57, 65-70.',
+        'Y. He, Y.T. Chen, C.Y. Li and H. Cui*，"Molecular Encoder - Decoder Based on Assembly of Graphene with Dye-labeled DNA", Chem. Commun., 2014, 50, 7994-7997.',
+        'F. Li, Y.T. Liu, M. Zhuang, H.L. Zhang, H. Cui*, "Biothiols as chelators for preparation of N-(aminobutyl)-N-(ethylisoluminol)/Cu2+ complexes bifunctionalized gold nanoparticles and sensitive sensing of pyrophosphate ion", ACS Appl. Mater. Inter., 2014, 6, 18104-18111.',
+        'N. Li, D.Q. Liu, H. Cui*, "Metal-nanoparticle-involved chemiluminescence and its applications in bioassays", Anal. Bioanal. Chem., 2014, 406(23), 5561-5571.',
+        'Y. He, G.M. Huang, and H. Cui*, "Quenching the Chemiluminescence of Acridinium Ester by Graphene Oxide for Label-Free and Homogeneous DNA Detection", ACS Appl. Mater. Interfaces, 2013, 5 (21), 11336–11340.',
+        'Y. He, H. Cui*, "Chemiluminescent Logic Gates Based on Functionalized Gold Nanoparticles/Graphene Oxide Nanocomposites", Chemistry - A European Journal, 2013, 19(40), 13584–13589.',
+        'F. Li, H. Cui*, "A label-free electrochemiluminescence aptasensor for thrombin based on novel assembly strategy of oligonucleotide and luminol functionalized gold nanoparticles", Biosens. Bioelectron., 2013, 39, 261-267.',
+        'Y.Q. Yu, Q. Cao, M. Zhou, H. Cui*, "A novel homogeneous label-free aptasensor for 2,4,6-trinitrotoluene detection based on an assembly strategy of electrochemiluminescent graphene oxide with gold nanoparticles and aptamer", Biosens. Bioelectron., 2013, 43. 137–142.',
+        'Y. He, H. Cui*, "Label free and homogeneous histone sensing based on chemiluminescence resonance energy transfer between lucigenin and gold nanoparticles", Biosens. Bioelectron., 2013, (47), 313-317',
+        'Y. He, G.M. Huang, J. Jiang, Q. Zhang, H. Cui*, "Preparation and electrochemiluminescent and photoluminescent properties of a graphene oxide colloid", Carbon., 2013, (56), 201-207.',
+        'D.Q. Liu, G.M. Huang, Y.Q. Yu, Y. He, H.L. Zhang and H. Cui*, "N-(Aminobutyl)-N-(ethylisoluminol) and hemin dual-functionalized graphene hybrids with high chemiluminescence", Chem. Commun., 2013, 49, 9794-9796.',
+        'Y. He, H. Cui**, “Synthesis of Dendritic Platinum Nanoparticles/Lucigenin/Reduced Graphene Oxide Hybrid with Chemiluminescence Activity”, Chem. Eur. J., 2012, 18, 4823-4826.',
+        'Y. He, H. Cui*, “Synthesis of highly chemiluminescent graphene oxide/silver nanoparticle nano-composites and their analytical applications”, J. Mater. Chem., 2012, 22, 9086-9091.',
+        'W. Shen, Y.Q. Yu, J.N. Shu, H. Cui*, “A graphene-based composite material noncovalently functionalized with a chemiluminescence reagent: synthesis and intrinsic chemiluminescence activity”, Chem. Commun., 2012, 48, 2894-2896.',
+        'Y. He, H. Cui*, “Fabrication of Luminol and Lucigenin Bifunctionalized Gold Nnanoparticles/Graphene Oxide Nanocomposites with Dual-Wavelength Chemiluminescence”, J. Phys. Chem. C, 2012, 116, 12593-12597.',
+        'Y.Q. Yu, M. Zhou, W. Shen, H.L. Zhang, Q. Cao, H. Cui*, “Synthesis of electrochemiluminescent graphene oxide functionalized with a ruthenium(II) complex and its use in the detection of tripropylamine”, Carbon, 2012, 50, 2539-2545.',
+        'W. Shen, D.Y. Tian, H. Cui*, D. Yang, Z.P. Bian, “Nanoparticle-based electrochemiluminescence immunosensor with enhanced sensitivity for cardiac troponin I using N-(aminobutyl)-N-(ethylisoluminol)-functionalized gold nanoparticles as labels”, Biosens. Bioelectron., 2011, 27, 18-24.',
+        'D.Y. Tian, Y. Chai, H.L. Zhang, H. Cui*, “Synthesis of N-(aminobutyl)-N-(ethylisoluminol) functionalized gold nanomaterials for chemiluminescent bio-probe”, Chem. Commun., 2011, 47, 4959-4961.',
+        'Y. He, D.Q. Liu, X.Y. He, H. Cui*, “One-pot synthesis of luminol functionalized silver nanoparticles with chemiluminescence activity for ultrasensitive DNA sensing”, Chem. Commun., 2011, 47, 10692-10694.',
+        'Y.Q. Yu, M. Zhou, H. Cui*, “Synthesis and electrochemiluminescence of bis(2,2- bipyridine)(5-amino-1,10-phenanthroline) ruthenium(II)-functionalized gold nanoparticles”, J. Mater. Chem., 2011, 21, 12622-12625.',
+        'D.Y. Tian, C.F. Duan, W. Wang, H. Cui*, "Ultrasensitive electrochemiluminescence immunosensor based on luminol functionalized gold nanoparticle labeling", Biosens. Bioelectron., 2010, 25, 2290-2295.',
+        'N. Li, W. Wang, D.Y. Tian, H. Cui*, “pH-dependent catalytic properties of Pd–Ag nanoparticles in luminol chemiluminescence”, Chem. Commun., 2010, 46, 1520-1522.',
+        'Y. Chai, D.Y. Tian, W. Wang, H. Cui*, “A novel electrochemiluminescence strategy for ultrasensitive DNA assay using luminol functionalized gold nanoparticles multi-labeling and amplification of gold nanoparticles and biotin-streptavidin system”, Chem. Commun., 2010, 46, 7560-7562.',
+        'Y. Chai, D.Y. Tian, W. Wang, H. Cui*, “A novel electrochemiluminescence strategy for ultrasensitive DNA assay using luminol functionalized gold nanoparticles multi-labeling and amplification of gold nanoparticles and biotin-streptavidin system”, Chem. Commun., 2010, 46, 7560-7562.',
+        'H. Zhang, H. Cui*, "Synthesis and Characterization of Functionalized Ionic Liquid-Stabilized Metal (Gold and Platinum) Nanoparticles and Metal Nanoparticle/Carbon Nanotube Hybrids", Langmuir, 2009, 25, 2604-2612.',
+        'H. Cui*, J.Z. Guo, N. Li, L.J. Liu, "Gold nanoparticle triggered chemilumineseence between luminol and AgNO3", J. Phys. Chem. C, 2008, 112, 11319-11323.',
+        'W. Wang, T. Xiong, H. Cui*, "Fluorescence and electrochemiluminescence of luminol-reduced gold nanoparticles: Photostability and platform effect", Langmuir, 2008, 24(6):2826-2833.',
+        'W. Wang, X. Yang, H. Cui*, "Growth mechanism of flowerlike gold nanostructures: surface plasmon resonance (SPR) and resonance rayleigh scattering (RRS) approaches to growth monitoring", J. Phys. Chem. C, 2008, 112, 16348-16353.',
+        'Y.P. Dong, H. Cui*, Y. Xu, "Comparative studies on electrogenerated chemiluminescence of luminol on gold nanoparticle modified electrodes", Langmuir, 2007, 23(2), 523-529.',
+        'H. Cui*, W. Wang, C.F. Duan, Y.P. Dong, J.Z. Guo, "Synthesis, characterization, and electrochemiluminescence of luminol-reduced gold nanoparticles and their application in a hydrogen peroxide sensor", Chem. Eur. J., 2007, 13 (24): 6975-6984.',
+        'Z.F. Zhang, H. Cui*, M.J. Shi, "Chemiluminescence accompanied by the reaction of gold nanoparticles with potassium permanganate", Phys. Chem. Chem. Phys., 2006, 8(8), 1017-1021.',
+        'H. Cui*, Z.F. Zhang, M.J. Shi, Y. Xu, Y.L. Wu, "Light Emission of Gold Nanoparticles Induced by the Reaction of Bis(2,4,6-trichlorophenyl) Oxalate and Hydrogen Peroxide", Anal. Chem., 2005, 77(19), 6402-6406.',
+        'H. Cui*, Z.F. Zhang, M.J. Shi, “Chemiluminescent Reactions Induced by Gold Nanoparticles”, J. Phys. Chem. B, 2005, 109, 3099-3103.',
+        'Z.F. Zhang, H. Cui*, C.Z. Lai, L.J. Liu, “Gold nanoparticles-catalyzed luminol chemiluminescence and its analytical applications”, Anal. Chem., 2005, 77(10), 3324-3329.',
+        'Q.L. Zhang, H. Cui*, A. Myint, M. Lian, L.J. Liu, "Sensitive determination of phenolic compounds using high-performance liquid chromatography with cerium(IV)-rhodamine 6G-phenolic compound chemiluminescence detection", J. Chromatogr. A, 2005, 1095(1-2), 94-101.',
+        'H. Xu, C.F. Duan, Z.F. Zhang, J.Y. Chen, C.Z. Lai, M. Lian, L.J. Liu, H. Cui*, “Flow injection determination of p-aminophenol at trace level using inhibited luminol-dimethylsulfoxide-NaOH-EDTA chemiluminescence”, Water Res., 2005, 39(23), 396-402.',
+        'H. Cui*, Y. Xu, Z.F. Zhang, “Multi-channel electrochemiluminescence of luminol in neutral and alkaline aqueous solutions on a gold nanoparticles self-assembled electrode” Anal. Chem., 2004, 76, 13, 4002-4010.',
+        'H. Cui*, G.Z. Zou, X.Q. Lin, “Electrochemiluminescence of luminol in alkaline solution at a paraffin-impregnated graphite electrode”, Anal. Chem., 2003, 75, 324-331.',
+        'C.G. Xie, H. Cui*, “Detection of tannic acid at trace level in industrial wastewaters using a highly sensitive chemiluminescence method” Water Res., 2003, 37, 233-237.',
+        'H. Cui, H.M. Hwang*, K, Zeng, H. Glover, H.T. Yu, Y.M. Liu, “Riboflavin-photosensitized degradation of atrazine in a freshwater environment” Chemosphere, 2002, 47, 991-999.',
+        'H. Cui*, C.X. He, and G.W. Zhao, “Determination of polyphenols by high-performance liquid chromatography with inhibited chemiluminescence detection”, J. Chromatogr. A, 1999, 855(1), 171-179.',
+        'H. Cui, L.E. Reusaet and A. Bult*, “The precolumn fluorescent derivatization of antagonist [Arg6, D-Trp7,9, MePhe8]- substance P {6-11} with benzoin in HPLC and selective determination of arginine - containing fragments in its degradation products”, J. Chromatogr. A, 1996, 736, 91-96.',
+        'H. Cui, L.E. Reusaet and A. Bult*, “Selective determination of peptides containing specific amino acid residues in high performance liquid chromatography and capillary electrophoresis”, J. Chromatogr. A, 1995, 704, 27-36.'
+
+        ]
+        var ol = document.getElementById('paper_listofcui')
+
+        listData.forEach(function (value){
+            var li = document.createElement('li');
+            li.appendChild(document.createTextNode(value));
+            ol.appendChild(li);
+        });
+        // 图片轮播
+        $('.carousel').carousel()
+     </script>
+</body>
+</html>

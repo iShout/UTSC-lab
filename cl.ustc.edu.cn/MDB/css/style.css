@@ -1,0 +1,183 @@
+html,
+body,
+header,
+#intro {
+    height: 100%;
+}
+
+#intro {
+    background: url("../../images/indexBg.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#main{
+    min-width: 100%;
+    min-height: 900px;
+
+}
+
+#footer{
+    width: auto;
+    height: 200px;
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+.cardTitle{
+    color: black;
+}
+.imgInitial{
+    width: 240px;
+    height: 180px;
+}
+
+                                                    /* 实验室概述所用css */
+.index2_content_left{
+    float: left; 
+    border-right: solid 1px black; 
+    width: 30%; 
+    padding: 50px 10px;
+    min-height: 600px;
+    margin: 180px 0;
+}
+.index2_content_right{
+    float: right;
+    width: 69%;
+    min-height: 600px;
+    margin: 100px auto;
+    display: block;
+    
+}
+#lab_brief_card{
+    margin: 100px auto;
+    min-height: 1000px;
+    align-items: center;
+}
+/* 段落缩进 */
+.p_content{
+    text-indent: 2em;
+}
+#basic_info{
+    color:black;
+    margin: 0 10px;
+    cursor: pointer;
+}
+#rsrch_topic{
+    color: grey;
+    margin: 0 10px;
+    cursor: pointer;
+}
+#tutor_intro{
+    color: grey;
+    margin: 0 10px;
+    cursor: pointer;
+}
+#basic_info_content{
+    padding: 25px;
+
+}
+#rsrch_topic_content{
+    display: none;   
+}
+#tutor_intro_content{
+    display: none;
+}
+.totop{
+    position: fixed;
+    right: 50px;
+    bottom: 20px;
+    cursor: pointer;
+}
+#project_table{}
+
+/* 崔教授的论文列表 */
+#paper_listofcui{}
+
+/* 下载课件页居中 */
+.lecture_download{
+    margin: 100px auto;
+    min-height: 1000px;
+    align-items: center;
+}
+
+#basic_info_pic{
+}
+
+
+                                                        /* 成员介绍页面css */
+.example-content {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px dashed #ccc;
+  }
+  
+.sticky-content {
+    font-size: 14px;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+  }
+  
+.example-static {
+    padding: 2rem 0;
+    font-size: 14px;
+    background: #fbfbfb;
+    border: 1px dashed #dcd9d9;
+  }
+
+/* 成员介绍-在编学生表格 */
+#students_table{}
+
+/* 将文本可点击 */
+.text-click{
+    cursor: pointer;
+}
+
+#member{}
+#graduate_member{}
+#member_content{}
+#graduate_member_content{
+    display: none;
+}
+#graduate_students_table{}
+
+@font-face{
+    font-family: kaiti;
+    src: url("../font/STKAITI.TTF")
+}
+
+                                                            /* 学术成果页面css */
+#year2000-2010{}
+#year2011-2015{}
+#year2016-2018{}
+#year2019{}
+#yearNEW{}
+#tab2000-2010{}
+#tab2011-2015{}
+#tab2016-2018{}
+#tab2019{}
+#tabNEW{}
+
+ul{
+    list-style: none;
+}
+#newpaper{}
+
+#year1999-2004{}
+#year2005-2009{}
+#year2010-2014{}
+#tab1999-2004{}
+#tab2005-2009{}
+#tab2010-2014{}
+
+#academic_paper_list{}
+#graduate_paper_list{}
+
+#to_academic{}
+#to_graduate{}
+                                   
+.background{
+    background-image: url(../../images/index2bg.PNG);
+}

@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>学术成果</title>
+    
+    <link href="./MDB/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="./MDB/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="./MDB/css/style.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="./MDB/js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="./MDB/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="./MDB/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="./MDB/js/mdb.min.js"></script>
+    <script>
+        // 返回页面顶部
+        function returnTop() {
+            var sdelay=0;
+            window.scrollBy(0,-10000);
+            if(document.body.scrollTop>0) { 
+            sdelay= setTimeout('returnTop()',50);
+            };
+        }
+    </script>
+</head>
+<body class="background">
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+
+        <!-- Logo -->
+        <img src="./images/utsc.png" alt="UTSC" style="width: 60px; height: 60px; margin-right: 30px;">
+      
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+      
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index2.html" style="font-size: large; font-weight: bold; margin-right: 20px;">主页</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="LabBrief.html" style="font-size: large; font-weight: bold; margin-right: 20px;">实验室概况</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="MemberIntro.html" style="font-size: large; font-weight: bold; margin-right: 20px;">成员介绍</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="AcaAchievement.html" style="font-size: large; font-weight: bold; margin-right: 20px;">学术成果</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Cooperation.html" style="font-size: large; font-weight: bold; margin-right: 20px;">交流合作</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Lectures.html" style="font-size: large; font-weight: bold; margin-right: 20px;">课程教学</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Links.html" style="font-size: large; font-weight: bold; margin-right: 20px;">相关链接</a>
+            </li>
+        </ul>
+     </nav>
+     <!-- 返回顶部按钮 -->
+     <i class="fas fa-arrow-circle-up fa-3x blue-text totop" onclick="returnTop()"></i>
+
+     
+     <div class="jumbotron text-center col-md-8" id="lab_brief_card" style="padding-top: 25px;">
+        <i class="fas fa-angle-left fa-3x" style="margin-right: 50px; cursor: pointer; color: grey;" id="to_academic"></i>
+        <i class="fas fa-angle-right fa-3x" style="margin-left: 50px; cursor: pointer;" id="to_graduate" ></i>
+         <!-- 学术论文列表 -->
+        <div style="margin-top: 25px;" id="academic_paper_list">
+            <h2>化学发光与电致化学发光实验室</h2>
+            <h2>发表学术论文列表</h2>
+            <hr color="black" width="60%">
+            <br>
+         <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="tabNEW" data-toggle="tab" href="#yearNEW" role="tab" aria-controls="yearNEW"
+                  aria-selected="true">NEW</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tab2019" data-toggle="tab" href="#year2019" role="tab" aria-controls="year2019"
+                  aria-selected="false">2019</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tab2016-2018" data-toggle="tab" href="#year2016-2018" role="tab" aria-controls="year2016-2018"
+                aria-selected="false">2018->2016</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tab2011-2015" data-toggle="tab" href="#year2011-2015" role="tab" aria-controls="year2011-2015"
+                aria-selected="false">2015->2011</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tab2000-2010" data-toggle="tab" href="#year2000-2010" role="tab" aria-controls="year2000-2010"
+                aria-selected="false">2010->2000</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+              <!-- 近期发布文献列表 -->
+            <div class="tab-pane fade show active" id="yearNEW" role="tabpanel" aria-labelledby="tabNEW">
+                <div style="margin-top: 25px;">
+                    <ul>
+                        <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">最近发布</span>
+                            <ol id="newpaper">
+
+                            </ol>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+            <!-- 2019年文献列表 -->
+            <div class="tab-pane fade" id="year2019" role="tabpanel" aria-labelledby="tab2019">
+                <div style="margin-top: 25px;">
+                    <ul>
+                        <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2019</span>
+                            <ol>
+                                <li><a href="https://pubs.rsc.org/en/content/articlehtml/2019/sc/c9sc00954j">Weijun Kong, Qi Li, Wei Wang, Xiaoning Zhao, Shenglong Jiang, Tianhua Zheng, Qun Zhang, Wen Shen, and Hua Cui "Rational design of functional materials guided by single particle chemiluminescence imaging", Chem. Sci., 2019, 10, 5444</a></li>
+                                <li><a href="https://link.springer.com/article/10.1007/s00216-019-01821-2">Jiangnan Shu, Zhili Han, and Hua Cui, “Highly chemiluminescent TiO2/tetra(4-carboxyphenyl)porphyrin/N-(4-aminobutyl)-N-ethylisoluminol nanoluminophores for detection of heart disease biomarker copeptin based on chemiluminescence resonance energy transfer”, Anal Bioanal Chem., 2019, 1618-2650</a></li>
+                                <li><a href="https://pubs.acs.org/doi/10.1021/acs.analchem.9b03066">Rui Yang, Fang Li, Wencan Zhang, Wen Shen, Di Yang, Zhiping Bian, and Hua Cui "Chemiluminescence immunoassays for simultaneousDetection of three heart-disease biomarkers using magnetic carbon composites and three-dimensional microfluidic paper-based device", Anal.Chem., 2019, 10.1021</a></li>
+                                <li><a href="https://pubs.acs.org/doi/10.1021/acs.analchem.9b02318">Zhili Han, Jiangnan Shu, Xu Liang, and Hua Cui "Label-Free Ratiometric Electrochemiluminescence Aptasensor Based on Nanographene Oxide Wrapped Titanium Dioxide Nanoparticles with Potential-Resolved Electrochemiluminescence." Anal.Chem., 2019, 91, 19, 12260-12267</a></li>
+                                <li><a href="https://pubs.acs.org/doi/10.1021/acs.analchem.9b01774">Yating Liu, Wen Shen, and Hua Cui "Combined Transition-Metal/Enzyme Dual Catalytic System for Highly Intensive Glow-Type Chemiluminescence-Functionalized CaCO3 Microspheres" Anal.Chem., 2019, 91 (16), 10614-10621</a></li>
+                                <li><a href="https://pubs.acs.org/doi/10.1021/acs.analchem.9b01315">Li Ju, Aihua Lyu, Hongxia Hao, Wen Shen, and Hua Cui "Deep Learning-Assisted Three-Dimensional Fluorescence Difference Spectroscopy for Identification and Semiquantification of Illicit Drugs in Biofluids". Anal Chem. 2019, 91 (15), 9343-9347</a></li>
+                                <li><a href="https://pubs.rsc.org/en/content/articlehtml/2019/tc/c9tc05223b">Yating Liu, Wen Shen, Hua Cui, “Metal ion-induced chemiluminescence recovery for highly intensive chemiluminescence bifunctionalized polydopamine nanospheres”, J. Mater. Chem. C, 2019, 7, 14588-14593</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>    
+            </div>
+            <!-- 2016-2018年文献列表 -->
+            <div class="tab-pane fade" id="year2016-2018" role="tabpanel" aria-labelledby="tab2016-2018">
+                <div style="margin-top: 25px;">
+                    <ul>
+                        <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2018</span>
+                            <ol>
+                                <li><a href="https://pubs.acs.org/doi/abs/10.1021/acs.analchem.7b05406">Zhili Han, Jiangnan Shu,Qiaoshi Jiang, and Hua Cui. "Coreactant-free and label-free electrochemiluminescence immunosensor for copeptin based on luminescent immuno-gold nanoassemblies", Anal.Chem, 2018, 90, 10, 6064-6070</a></li>
+                                <li><a href="http://pubs.rsc.org/en/content/articlehtml/2018/tc/c8tc01966e">Kun Zhao , Wen Shen and Hua Cui. "Highly chemiluminescent silver nanoclusters with a dual catalytic center", J. Mater. Chem. C, 2018, 6, 6549-6555</a></li>
+                                <li><a href="https://pubs.acs.org/doi/abs/10.1021/acsami.8b02521">Yao Huang, Lingfeng Gao, and Hua Cui "Assembly of Multifunctionalized Gold Nanoparticles with Chemiluminescent, Catalytic, and Immune Activity for Label-Free Immunoassays", ACS Appl. Mater. Interfaces 10, 20, 17040-17046</a></li>
+                                <li><a href="https://link.springer.com/article/10.1007/s11426-018-9329-5">Rui Yang, Shaomin Liu, and Hua Cui "Highly chemiluminescent magnetic mesoporous carbon composites Fe3O4@void@C with yolk-shell structure", Sci.China.Chem., 2018, 61: 1143–1150</a></li>
+                            </ol>
+                        </li>
+                        <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2017</span>
+                            <ol>
+                                <li><a href="http://pubs.rsc.org/en/Content/ArticleLanding/2017/TC/C7TC02230A#!divAbstract">Xiangyang Liu, Qi Li, Jiangnan Shu and Hua Cui "N-(4-Aminobutyl)-N-ethylisoluminol/CoFe2O4/graphene hybrids with unique chemiluminescence and magnetism", J. Mater. Chem. C., 2017, 5, 7612--7620.</a></li>
+                                <li><a href="http://pubs.rsc.org/en/Content/ArticleLanding/2017/RA/C7RA06327J#!divAbstract">Qi Li, Xiangyang Liu, Meng Zhuang, Xu Wang and  Hua Cui "Cobalt(II)-8-hydroxyquinoline-5-sulfonic acid complex/N-(4-aminobutyl)-N-ethylisoluminol/reduced graphene hybrids as nanocatalytic reaction platforms for chemiluminescence", RSC Advances, 2017, 7, 37261-37267.</a></li>
+                                <li><a href="https://pubs.acs.org/doi/abs/10.1021/acs.analchem.7b01111">Weijun Kong, Xiaoning Zhao, Qiuju Zhu, Lingfeng Gao, and Hua Cui. "Highly Chemiluminescent Magnetic Beads for Label-Free Sensing of 2,4,6-Trinitrotoluene". Anal. Chem., 2017, 89 (13), pp 7145–7151.</a></li>
+                                <li><a href="https://www.nature.com/articles/s41467-017-01101-6">Yating Liu, Wen Shen, Qi Li, Jiangnan Shu, Lingfeng Gao, Mingming Ma, Wei Wang and Hua Cui "Firefly-mimicking intensive and long-lasting chemiluminescence hydrogels". Nature Commun., 2017, 8:1003, DOI: 10.1038/s41467-017-01101-6</a></li>
+                                <li><a href="https://pubs.acs.org/doi/abs/10.1021/acs.analchem.7b04175">Jiangnan Shu, Zhili Han, Tianhua Zheng, Dexin Du, Guizheng Zou , and Hua Cui. "Potential-Resolved Multicolor Electrochemiluminescence of N-(4-Aminobutyl)-N-ethylisoluminol/tetra(4-carboxyphenyl)porphyrin/TiO2 Nanoluminophores". Anal. Chem., 2017, 89, 23, 12636-12640</a></li>
+                                <li><a href="https://pubs.acs.org/doi/abs/10.1021/acs.analchem.7b03873">Jue Wang, Wenhui Zhong , Xiaoying Liu, Tongtong Yang, Fang Li, Qi Li, Weiren Cheng, Chen Gao, Zheng Jiang , Jun Jiang , and Hua Cui. "Highly Active Graphene Oxide-Supported Cobalt Single-Ion Catalyst for Chemiluminescence Reaction". Anal. Chem., 2017, 89, 24, 13518-13523</a></li>
+                            </ol>
+                        </li>
+                        <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2016</span>
+                            <ol>
+                                <li><a href="https://pubs.acs.org/doi/abs/10.1021/acsami.6b04055">Zhili Han, Fang Li, Jiangnan Shu, Lingfeng Gao, Xiaoying Liu, and Hua Cui "Acridinium Ester-Functionalized Carbon Nanomaterials: General Synthesis Strategy and Outstanding Chemiluminescence", ACS Appl. Mater. Inter., 2016，7(27), pp 17454-17460.</a></li>
+                                <li><a href="http://pubs.rsc.org/en/content/articlehtml/2015/ra/c5ra24928g">Lingfeng Gao, Li Ju, and Hua Cui "Determination of binding constant of specific interactions and binding target concentration simultaneously using a general chemiluminescence method", RSC Advances, 2016, 6, 5305-5311</a></li>
+                                <li><a href="http://link.springer.com/article/10.1007/s00216-015-9244-7/fulltext.html">Lingfeng Gao, Xiao He , Li Ju, Xiaoying Liu, Fang Li, Hua Cui "A label-free method for the detection of specific DNA sequences using gold nanoparticles bifunctionalized with a chemiluminescent reagent and a catalyst as signal reporters", Anal. Bioanal. Chem., 2016, DOI：10.1007/s00216-015-9244-7</a></li>
+                                <li><a href="http://pubs.rsc.org/en/content/articlehtml/2016/tc/c6tc00072j">Qi Li, Fang Li, Wen Shen, Xiangyang Liu and Hua Cui* "Lucigenin/Co(tryptophan)2 complex bifunctionalized graphene oxide: facile synthesis and unique chemiluminescence", J. Mater. Chem. C., 2016,4, 3477-3484.</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+            <!-- 2011-2015年文献列表 -->
+            <div class="tab-pane fade" id="year2011-2015" role="tabpanel" aria-labelledby="tab2011-2015">
+                <div style="margin-top: 25px;">
+                    <ul>
+                        <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2015</span>
+                            <ol>
+                                <li><a href="https://pubs.acs.org/doi/full/10.1021/am509094p">Hongli Zhang, Zhili Han, Xu Wang, Fang Li, Hua Cui, Di Yang, and Zhiping Bian "Sensitive Immunosensor for N-Terminal Pro-brain Natriuretic Peptide Based on N-(Aminobutyl)-N-(ethylisoluminol)-Functionalized Gold Nanodots/Multiwalled Carbon Nanotube Electrochemiluminescence Nanointerface",ACS Appl. Mater. Inter., 2015, 7 (14), pp 7599-7604</a></li>
+                                <li><a href="http://link.springer.com/article/10.1007/s11426-015-5320-2">Jiangnan, Shu, Wen Shen, and Hua Cui. "Ultrasensitive label-free electrochemiluminescence immunosensor based on N-(4-aminobutyl)-N-ethylisoluminol-functionalized graphene composite." Science China Chemistry 2015,  58(3), pp 425-432.</a></li>
+                                <li><a href="http://pubs.rsc.org/en/content/articlehtml/2015/cc/c5cc03104d">Jiangnan, Shu,  Wei Wang, and Hua Cui. "Direct electrochemiluminescence of gold nanoparticles bifunctionalized by luminol analogue-metal complexes in neutral and alkaline media." Chem. Commun. 2015: 51, 11366-11369</a></li>
+                                <li><a href="https://pubs.acs.org/doi/abs/10.1021/acsami.5b05325">Xiaoying Liu , Zhili Han , Fang Li , Lingfeng Gao , Gaolin Liang , and Hua Cui. "Highly Chemiluminescent Graphene Oxide Hybrids Bifunctionalized by N-(aminobutyl)-N-(ethylisoluminol)/Horseradish Peroxidase and Sensitive Sensing of Hydrogen Peroxide". ACS Appl. Mater. Inter., 2015，7 (33), pp 18283-18291</a></li>
+                                <li><a href="https://pubs.acs.org/doi/abs/10.1021/acs.analchem.5b02913">Guixin Li, Xiuxia Yu, Danqing Liu, Xiaoying Liu, Fang Li, and Hua Cui*. "Label-Free Electro chemiluminescence Aptasensor for 2,4,6-Trinitrotoluene Based on Bilayer Structure of Luminescence Functionalized Graphene Hybrids". Anal. chem., 2015，87, 10976-10981.</a></li>
+                            </ol>
+                        </li>
+                        <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2014</span>
+                            <ol>
+                                <li><a href="http://www.sciencedirect.com/science/article/pii/S1010603013004632">Hongli Zhang, Mengxiao Liu, Hua Cui, "Fluorescence and fluorescence resonance energy transfer of N-(aminobutyl)-N-(ethylisoluminol) functionalized gold nanoparticles", J.Photochem.Photobio.A, 2014, 275, 1-6.</a></li>
+                                <li><a href="http://pubs.rsc.org/en/content/articlelanding/2013/nr/c3nr05574d/unauth#!divAbstract">Hongli Zhang and Hua Cui，"High-density assembly of chemiluminescence functionalized gold nanodots on multiwalled carbon nanotubes and their application as biosensing platforms", Nanoscale,014, 6(5), 2563 - 2566.</a></li>
+                                <li><a href="https://pubs.acs.org/doi/abs/10.1021/ac403281g">Fang Li, Yuqi Yu, Qi Li, Ming Zhou, Hua Cui, "A Homogeneous Signal-On Strategy for the Detection of rpoB Genes of Mycobacterium tuberculosis Based on Electrochemiluminescent Graphene Oxide and Ferrocene Quenching", Anal. Chem. 2014, 86 (3), 1608-1613.</a></li>
+                                <li><a href="http://www.sciencedirect.com/science/article/pii/S0003267014000671">Xiuxia Yu, Yi He, Jie Jiang, Hua Cui, "A competitive immunoassay for sensitive detection of small moleculeschloramphenicol based on luminol functionalized silver nanoprobe", Anal. Chim. Acta, 2014, 812, 236-242.</a></li>
+                                <li><a href="http://www.sciencedirect.com/science/article/pii/S0013468614001777">Xiuxia Yu, Hua Cui, "Electrochemiluminescence bioassay for thrombin based on dynamic assembly of aptamer, thrombin and N-(aminobutyl)-N-(ethylisoluminol) functionalized gold nanoparticles", Electrochimica Acta, 2014, 125, 156-162.</a></li>
+                                <li><a href="http://www.sciencedirect.com/science/article/pii/S095656631400075X">Lingfeng Gao, Hongli Zhang, Hua Cui, "A general strategy to prepare homogeneous and reagentless GO/lucigenin&enzyme biosensors for detection of small biomolecules", Biosens. Bioelectron., 2014, 57, 65-70.</a></li>
+                                <li><a href="https://pubs.acs.org/doi/abs/10.1021/ac5002433">Mengxiao Liu, Hongli Zhang, Jiangnan Shu, Xiaoyang Liu, Fang Li, and Hua Cui, "Gold Nanoparticles Bifunctionalized by Chemiluminescence Reagent and Catalyst Metal Complexes: Synthesis and Unique Chemiluminescence Property", Anal. Chem. 2014, 86 (6), 2857-2861.</a></li>
+                                <li><a href="http://pubs.rsc.org/en/Content/ArticleLanding/2014/CC/c4cc01242a#!divAbstract">Yi He, Yuting Chen, ChongYing Li and Hua Cui，"Molecular Encoder - Decoder Based on Assembly of Graphene with Dye-labeled DNA", Chem. Commun. 2014,50, 7994-7997.</a></li>
+                                <li><a href="https://pubs.acs.org/doi/abs/10.1021/ac501061c">Shiyuan Li , Duyu Chen , Qingtong Zhou , Wei Wang , Lingfeng Gao , Jie Jiang , Haojun Liang , Yangzhong Liu , Gaolin Liang , and Hua Cui, "A General Chemiluminescence Strategy for Measuring Aptamer-Target Binding and Target Concentration", Anal. Chem. 2014, 86 (11), 5559-5566.</a></li>
+                                <li><a href="https://pubs.acs.org/doi/abs/10.1021/am504985w">Fang Li, Yating Liu, Meng Zhuang, Hongli Zhang, Hua Cui*, "Biothiols as chelators for preparation of N-(aminobutyl)-N-(ethylisoluminol)/Cu2+ complexes bifunctionalized gold nanoparticles and sensitive sensing of pyrophosphate ion", ACS Appl. Mater. Inter., 2014, 6, 18104-18111.</a></li>
+                                <li><a href="https://pubs.acs.org/doi/abs/10.1021/ac503123q">Yi He , Xiao He , Xiaoying Liu , Lingfeng Gao , and Hua Cui，“Dynamically tunable chemiluminescence of luminol functionalized silver nanoparticles and its application to protein sensing arrays” Anal. Chem. 2014.  86 (24), pp 12166-12171</a></li>
+                                <li><a href="http://link.springer.com/article/10.1007/s00216-014-7901-x">Na Li, Danqing Liu, Hua Cui, "Metal-nanoparticle-involved chemiluminescence and its applications in bioassays", Anal. Bioanal. Chem. 2014, 406(23), 5561-5571.</a></li>
+                            </ol>
+                        </li>
+                        <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2013</span>
+                            <ol>
+                                <li><a href="http://www.sciencedirect.com/science/article/pii/S0956566312005027">F. Li, H. Cui, "A label-free electrochemiluminescence aptasensor for thrombin based on novel assembly strategy of oligonucleotide and luminol functionalized gold nanoparticles", Biosens. Bioelectron., 2013, 39, 261-267.</a></li>
+                                <li><a href="http://www.sciencedirect.com/science/article/pii/S0956566312008743">Y.Q. Yu, Q. Cao, M. Zhou, H. Cui, "A novel homogeneous label-free aptasensor for 2,4,6-trinitrotoluene detection based on an assembly strategy of electrochemiluminescent graphene oxide with gold nanoparticles and aptamer", Biosens. Bioelectron., 2013, 43. 137-142.</a></li>
+                                <li><a href="http://pubs.rsc.org/en/Content/ArticleLanding/2013/TB/c2tb00375a">H.L. Zhang, M.X. Liu, G.M. Huang, Y.Q. Yu, W. Shen, H. Cui, "Highly chemiluminescent gold nanopopcorns functionalized by N-(aminobutyl)-N-(ethylisoluminol) with lipoic acid as a co-stabilizing reagent", J. Mater. Chem. B, 2013, DOI:10.1039/C2TB00375A.</a></li>
+                                <li><a href="https://onlinelibrary.wiley.com/doi/10.1002/bio.1380/full">F. Li, D.Y. Tian, H. Cui, "Synthesis and characterizations of iso-luminol-functionalized, tadpole-shaped, gold nanomaterials", Luminesence.,2013, 28, 7-15.</a></li>
+                                <li><a href="http://pubs.rsc.org/en/Content/ArticleLanding/2013/AN/c3an36805j">F. Li, Y. Q. Yu , H. Cui, D. Yang, Z.P. Bian, "Label-free electrochemiluminescence immunosensor for cardiac troponin I using luminol functionalized gold nanoparticles as a sensing platform", Analyst, 2013, 138, 1844-1850.</a></li>
+                                <li><a href="http://www.sciencedirect.com/science/article/pii/S0956566313001784">Yi He, Hua Cui, "Label free and homogeneous histone sensing based on chemiluminescence resonance energy transfer between lucigenin and gold nanoparticles", Biosens. Bioelectron., 2013, (47), 313-317</a></li>
+                                <li><a href="http://www.sciencedirect.com/science/article/pii/S0008622313000456">Yi He, Guangming Huang, Jie Jiang, Qing Zhang, Hua Cui, "Preparation and electrochemiluminescent and photoluminescent properties of a graphene oxide colloid", Carbon., 2013,(56),201-207</a></li>
+                                <li><a href="http://www.sciencedirect.com/science/article/pii/S0003267013008921">Jie Jiang, Yi He, Xiuxia Yu, Jinyang Zhao, Hua Cui, "A homogeneous hemin/G-quadruplex DNAzyme based turn-on chemiluminescence aptasensor for interferon-gamma detection via in-situ assembly of luminol functionalized gold nanoparticles, deoxyribonucleic acid, interferon-gamma and hemin", Anal. Chim. Acta, 2013, 60-64</a></li>
+                                <li><a href="http://pubs.rsc.org/en/content/articlelanding/2013/cc/c3cc44765k">Danqing Liu, Guangming Huang, Yuqi Yu, Yi He, Hongli Zhang and Hua Cui, "N-(Aminobutyl)-N-(ethylisoluminol) and hemin dual-functionalized graphene hybrids with high chemiluminescence", Chem. Commun. 2013, 49, 9794-9796</a></li>
+                                <li><a href="https://pubs.acs.org/doi/abs/10.1021/am404138x">Yi He, Guangming Huang, and Hua Cui, "Quenching the Chemiluminescence of Acridinium Ester by Graphene Oxide for Label-Free and Homogeneous DNA Detection", ACS Appl. Mater. Interfaces, 2013, 5 (21), pp 11336-11340</a></li>
+                                <li><a href="https://onlinelibrary.wiley.com/doi/10.1002/chem.201301782/full">Yi He, Hua Cui, "Chemiluminescent Logic Gates Based on Functionalized Gold Nanoparticles/Graphene Oxide Nanocomposites", Chemistry - A European Journal, 2013, 19(40), 13584-13589.</a></li>
+                            </ol>
+                        </li>
+                        <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2012</span>
+                            <ol>
+                                <li><a href="http://pubs.rsc.org/en/content/articlelanding/2012/cc/c2cc17674b/unauth#!divAbstract">W. Shen, Y.Q. Yu, J.N. Shu, H. Cui, "A graphene-based composite material noncovalently functionalized with a chemiluminescence reagent: synthesis and intrinsic chemiluminescence activity", Chem. Commun., 2012, 48, 2894-2896.</a></li>
+                                <li><a href="http://pubs.rsc.org/en/content/articlehtml/2012/jm/c2jm16028e">Y. He, H. Cui, "Synthesis of highly chemiluminescent graphene oxide/silver nanoparticle nano-composites and their analytical applications", J. Mater. Chem., 2012, 22, 9086-9091.</a></li>
+                                <li><a href="http://www.sciencedirect.com/science/article/pii/S0003267011016710">Y. Chai, D.Y. Tian, H. Cui, "Electrochemiluminescence biosensor for the assay of small molecule and protein based on bifunctional aptamer and chemiluminescent functionalized gold nanoparticles", Anal. Chim. Acta, 2012, 715, 86-92.</a></li>
+                                <li><a href="https://onlinelibrary.wiley.com/doi/10.1002/chem.201104044/full">Y. He, H. Cui, "Synthesis of Dendritic Platinum Nanoparticles/Lucigenin/Reduced Graphene Oxide Hybrid with Chemiluminescence Activity", Chem. Eur. J., 2012, 18, 4823-4826.</a></li>
+                                <li><a href="http://www.sciencedirect.com/science/article/pii/S0008622312001224">Y.Q. Yu, M. Zhou, W. Shen, H.L. Zhang, Q. Cao, H. Cui, "Synthesis of electrochemiluminescent graphene oxide functionalized with a ruthenium(II) complex and its use in the detection of tripropylamine", Carbon, 2012, 50, 2539-2545.</a></li>
+                                <li><a href="https://pubs.acs.org/doi/abs/10.1021/jp303304z">Y. He, H. Cui, "Fabrication of Luminol and Lucigenin Bifunctionalized Gold Nnanoparticles/Graphene Oxide Nanocomposites with Dual-Wavelength Chemiluminescence", J. Phys. Chem. C, 2012, 116, 12953-12957.</a></li>
+                                <li><a href="http://pubs.rsc.org/en/content/articlelanding/2012/cc/c2cc34612e/unauth#!divAbstract">J. Jiang, Y. He, S.Y. Li, H. Cui,"Amino acids as the source for producing carbon nanodots: microwave assisted one-step synthesis, intrinsic photoluminescence property and intense chemiluminescence enhancement",Chem. Commun., 2012, 48, 9634-9636.</a></li>
+                                <li><a href="http://www.sciencedirect.com/science/article/pii/S1010603012002419">X.X. Yu, Y. Chai, J. Jiang, H. Cui, "Sensitive ECL sensor for sequence-specific DNA from Mycobacterium tuberculosis based on N-(aminobutyl)-N-ethylisoluminol functionalized gold nanoparticles labeling", J.Photochem.Photobio.A, 2012, 241,  45-51.</a></li>
+                                <li>H. Cui, "Chemiluminescence Functionalized Nanoprobes for Bioassays", Luminescence, 2012, 27, 111.</li>
+                                <li>Y. He, H. Cui,"Synthesis of highly chemiluminescent graphene oxide/metal nanoparticles nano-composites and their analytical applications", Luminescence, 2012, 27, 121-122.</li>
+                                <li>H. Zhang, H. Cui, "Fluorescent Sensors Based on Graphene Oxide", Progress in Chemistry, 2012, 24, 1554-1559.</li>
+                            </ol>
+                        </li>
+                        <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2011</span>
+                            <ol>
+                                <li><a href="http://pubs.rsc.org/en/content/articlehtml/2011/cc/c1cc10435g">D.Y. Tian, Y. Chai, H.L. Zhang, H. Cui, "Synthesis of N-(aminobutyl)-N-(ethylisoluminol) functionalized gold nanomaterials for chemiluminescent bio-probe", Chem. Commun., 2011, 47, 4959-4961.</a></li>
+                                <li><a href="http://www.sciencedirect.com/science/article/pii/S1010603010003941">B. Liu, Y. He, C.F. Duan, N. Li, H. Cui, "Platinum nanoparticle-catalyzed lucigenin-hydrazine chemiluminescence", J.Photochem.Photobio.A, 2011, 217, 62-67.</a></li>
+                                <li><a href="http://link.springer.com/article/10.1007/s00216-010-4157-y">Y. He, H. Zhang, Y. Chai, H. Cui, "DNA sensor by using electrochemiluminescence of acridinium eater initiated by tripropylamine", Anal. Bioanal. Chem. 2011, 399, 3451-3458.  </a></li>
+                                <li><a href="http://pubs.rsc.org/en/Content/ArticleLanding/2011/AN/c1an15298j#!divAbstract">Y. Chai, D.Y. Tian, J. Gu, H. Cui, "A novel electrochemiluminescence aptasensor for protein based on a sensitive N-(aminobutyl)-N-ethylisoluminol-functionalized gold nanoprobe", Analyst, 2011, 136, 3244-3251.</a></li>
+                                <li><a href="http://pubs.rsc.org/en/content/articlehtml/2011/jm/c1jm11843a">Y.Q. Yu, M. Zhou, H. Cui, "Synthesis and electrochemiluminescence of bis(2,2 '-bipyridine)(5-amino-1,10-phenanthroline) ruthenium(II)-functionalized gold nanoparticles", J. Mater. Chem., 2011, 21, 12622-12625.</a></li>
+                                <li><a href="http://www.sciencedirect.com/science/article/pii/S0956566311003198">W. Shen, D.Y. Tian, H. Cui, D. Yang, Z.P. Bian, "Nanoparticle-based electrochemiluminescence immunosensor with enhanced sensitivity for cardiac troponin I using N-(aminobutyl)-N-(ethylisoluminol)-functionalized gold nanoparticles as labels", Biosens. Bioelectron., 2011, 27, 18-24.</a></li>
+                                <li><a href="http://pubs.rsc.org/en/Content/ArticleLanding/2011/RA/c1ra00206f">J. Jiang, Y. Chai, H. Cui, "The electrogenerated chemiluminescence detection of IS6110 of Mycobacterium tuberculosis based on a luminol functionalized gold nanoprobe", RSC Adv., 2011, 1, 247-254.</a></li>
+                                <li><a href="http://pubs.rsc.org/en/content/articlehtml/2011/cc/c1cc14389a">Y. He, D.Q. Liu, X.Y. He, H. Cui, "One-pot synthesis of luminol functionalized silver nanoparticles with chemiluminescence activity for ultrasensitive DNA sensing", Chem. Commun., 2011, 47, 10692-10694.</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+            <!-- 2000-2010年文献列表 -->
+            <div class="tab-pane fade" id="year2000-2010" role="tabpanel" aria-labelledby="tab2000-2010">
+            <div style="margin-top: 25px;">
+                <ul>
+                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2010</span>
+                        <ol>
+                            <li><a href="http://www.sciencedirect.com/science/article/pii/S0956566310001326">D.Y. Tian, C.F. Duan, W. Wang, H. Cui, "Ultrasensitive electrochemiluminescence immunosensor based on luminol functionalized gold nanoparticle labeling", Biosens. Bioelectron., 2010, 25, 2290-2295.</a></li>
+                            <li><a href="http://pubs.rsc.org/en/content/articlehtml/2010/cc/b920736h">N. Li, W. Wang, D.Y. Tian, H. Cui, "pH-dependent catalytic properties of Pd-Ag nanoparticles in luminol chemiluminescence", Chem. Commun., 2010, 46, 1520-1522.</a></li>
+                            <li><a href="http://www.sciencedirect.com/science/article/pii/S1010603010003321">N. Li, J. Gu, H. Cui, "Luminol chemiluminescence induced by silver nanoparticles in the presence of nucleophiles and Cu2+", J.Photochem.Photobio.A, 2010, 215, 185-190.</a></li>
+                            <li><a href="http://pubs.rsc.org/en/Content/ArticleLanding/2010/CC/c0cc02356f#!divAbstract">Y. Chai,D.Y. Tian, W. Wang, H. Cui, "A novel electrochemiluminescence strategy for ultrasensitive DNA assay using luminol functionalized gold nanoparticles multi-labeling and amplification of gold nanoparticles and biotin-streptavidin system", Chem. Commun., 2010, 46, 7560-7562.</a></li>
+                        </ol>
+                    </li>
+                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2009</span>
+                        <ol>
+                            <li>N. Li, J.Z. Guo, B. Liu, Y.Q. Yu, H. Cui, L.Q. Mao, Y.Q. Lin, "Determination of monoamine neurotransmitters and their metabolites in a mouse brain microdialysate by coupling high-performance liquid chromatography with gold nanoparticle-initiated chemiluminescence", Analytica Chimica Acta, 2009, 645 (1-2), 48-55.</li>
+                            <li>C.F. Duan, H. Cui, “Time-tunable autocatalytic lucigenin chemiluminescence initiated by platinum nanoparticles and ethanol”, Chem. Commun, 2009, 18, 2574-2576.</li>
+                            <li>C.F. Duan, G.M. Liu, Z.F. Zhang, H. Cui, "Oscillating chemiluminescence in rhodamine B-induced Belousov-Zhabotinsky reaction catalyzed by Ce(IV)", Chinese Science Bulletin, 2009, 54, 1901-1907.</li>
+                            <li>D.Y. Tian, C.F. Duan, W. Wang, N. Li, H. Zhang, H. Cui, Y.Y. Lu, "Sandwich-type electrochemiluminescence immunosensor based on N-(aminobutyl)-N-ethylisoluminol labeling and gold nanoparticle amplification", Talanta, 2009, 78, 399-404.</li>
+                            <li>H. Zhang, H. Cui, "Synthesis and Characterization of Functionalized Ionic Liquid-Stabilized Metal (Gold and Platinum) Nanoparticles and Metal Nanoparticle/Carbon Nanotube Hybrids", Langmuir, 2009, 25, 2604-2612.</li>
+                        </ol>
+                    </li>
+                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2008</span>
+                        <ol>
+                            <li>W. Wang, H. Cui, Z.X. Deng, Y.P. Dong, J.Z. Guo, "A general E-E/C mechanism for the counter-peak in luminol electrochemiluminescence", J. Electroanal. Chem., 2008, 612, 277-287.</li>
+                            <li>J.Z. Guo, H. Cui, W. Zhou, W. Wang, "Ag nanoparticle-catalyzed chemiluminescent reaction between luminol and hydrogen peroxide", J. Photochem. Photobiol. A, 2008, 193, 89-96.</li>
+                            <li>W. Wang, T. Xiong, H. Cui, "Fluorescence and electrochemiluminescence of luminol-reduced gold nanoparticles: Photostability and platform effect", Langmuir, 2008, 24(6):2826-2833.</li>
+                            <li>H. Zhang, H. Cui, W. Wang, M.J. Shi, J.Z. Guo, "Electrochemiluminescence of lucigenin/tributylamine system in ethanol solution", J. Photochem. Photobiol. A, 2008, 197, 55-61.</li>
+                            <li>W. Wang, H. Cui, "Chitosan-luminol reduced gold nanoflowers: From one-pot synthesis to morphology-dependent SPR and chemiluminescence sensing", J. Phys. Chem. C, 2008, 112, 10759-10766.</li>
+                            <li>H. Cui, J.Z. Guo, N. Li, L.J. Liu, "Gold nanoparticle triggered chemilumineseence between luminol and AgNO3",
+                                J. Phys. Chem. C, 2008, 112, 11319-11323.</li>
+                            <li>王伟，郭吉兆，崔华，"碱性水溶液中的单线态氧电致化学发光(英文)", 中国科学技术大学学报，2008，38(6),594-600.</li>
+                            <li>C.F. Duan, Y.Q. Yu, H. Cui, "Gold nanoparticle-based immunoassay by using non-stripping chemiluminescence detection", Analyst, 2008, 133, 1250-1255.</li>
+                            <li>W. Wang, X. Yang, H. Cui, "Growth Mechanism of Flowerlike Gold Nanostructures: Surface Plasmon Resonance (SPR) and Resonance Rayleigh Scattering (RRS) Approaches to Growth Monitoring", J. Phys. Chem. C, 2008, 112, 16348-16353.</li>
+                        </ol>
+                    </li>
+                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2007</span>
+                        <ol>
+                            <li>Y.P. Dong, H. Cui, Y. Xu, "Comparative studies on electrogenerated chemiluminescence of luminol on gold nanoparticle modified electrodes", Langmuir, 2007, 23(2), 523-529.</li>
+                            <li>C.M. Wang, H. Cui, "Electrogenerated chemiluminescence of luminol in neutral and alkaline aqueous solutions on a silver nanoparticle self-assembled gold electrode", Luminescence, 2007, 22(1), 35-45.</li>
+                            <li>J.Z. Guo, H. Cui, S.L. Xu, Y.P. Dong, "A new electrogenerated chemiluminescence peak of lucigenin in the hydrogen-evolution region induced by platinum nanoparticles", J. Phys. Chem. C, 2007, 111(2), 606-611.</li>
+                            <li>C.F. Duan, H. Cui, Z.F. Zhang, B. Liu, J.Z. Guo, W. Wang, "Size-dependent inhibition and enhancement by gold nanoparticles of luminol-ferricyanide chemiluminescence", J. Phys. Chem. C, 2007, 111(12), 4561-4566.</li>
+                            <li>S.L. Xu, H. Cui, "Luminol chemiluminescence catalysed by colloidal platinum nanoparticles", Luminescence, 2007, 22(2): 77-87.</li>
+                            <li>M.J. Shi, H. Cui, "Electrochemiluminescence of fluorescein in alkaline solution at a polycrystalline gold electrode", J. Luminescence, 2007, 26(1): 187-195.</li>
+                            <li>J.Z. Guo, H. Cui, "Lucigenin chemiluminescence induced by noble metal nanoparticles in the presence of adsorbates", J. Phys. Chem. C, 2007, 111 (33): 12254-12259.</li>
+                            <li>H. Cui, W. Wang, C.F. Duan, Y.P. Dong, J.Z. Guo, "Synthesis, characterization, and electrochemiluminescence of luminol-reduced gold nanoparticles and their application in a hydrogen peroxide sensor", Chem. Eur. J., 2007, 13 (24): 6975-6984.</li>
+                            <li>H. Cui, H. Zhang, M.J. Shi, W. Wang, Y.P. Dong, J.Z. Guo, "Electrogenerated chemiluminescence of Lucigenin in ethanol solution at a polycrystalline gold electrode", Electroanalysis, 2007, 19 (16): 1703-1710.</li>
+                            <li>M.J. Shi, A. Myint, Y.P. Dong, H.Cui, "The enhancement and inhibition of lucigenin chemiluminescence by phenol and aniline derivatives", SPECTROSCOPY AND SPECTRAL ANALYSIS, 2007, 27 (10): 1945-1950.</li>
+                            <li>M.J. Shi, H. Cui, "Enhancement and inhibition by phenols and anilines on luminol electrochemiluminescence", Acta Chimica Sinica, 2007, 65, 2555-2562.</li>
+                        </ol>
+                    </li>
+                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2006</span>
+                        <ol>
+                            <li>Z.F. Zhang, H. Cui, M.J. Shi, "Chemiluminescence accompanied by the reaction of gold nanoparticles with potassium permanganate", Phys. Chem. Chem. Phys., 2006, 8(8), 1017-1021.</li>
+                            <li>G.H. Wan, H. Cui, H.S. Zheng, Y.Q. Pang, L.J. Liu, X.F. Yu, "Flow-injection determination of streptomycin residues in milk using the luminol-periodate-Mn2+ chemiluminescence system", Luminescence, 2006, 21(1), 36-42.</li>
+                            <li>H.X. Yu, H. Cui, J.B. Guan, "Cathodic electrochemiluminescence of acetonitrile, acetonitrile-1,10-phenanthroline and acetonitrile-ternary Eu(III) complexes at a gold electrode", Luminescence, 2006, 21(2), 81-89.</li>
+                            <li>H. Xu, C.F. Duan, C.Z. Lai, M. Lian, Z.F. Zhang, L.J. Liu, H. Cui, "Inhibition and enhancement by organic compounds of luminol-KIO4-H2O2 chemiluminescence", Luminescence, 2006, 21(3), 195-201.</li>
+                            <li>H. Cui, Q.L. Zhang, A. Myint, X.W. Ge, L.J. Liu, "Chemiluminescence of cerium(IV)-rhodamine 6G-phenolic compound system", J. Photochem. Photobio. A - Chemistry, 2006, 181(2-3), 238-245.</li>
+                            <li>H. Cui, Y.P. Dong, "Multichannel electrogenerated chemiluminescence of lucigenin in neutral and alkaline aqueous solutions on a gold nanoparticle self-assembled gold electrode", J. Electroanal. Chem., 2006, 595(1),37-46.</li>
+                            <li>Y.P. Dong, H. Cui, C.M. Wang, "Electrogenerated Chemiluminescence of Luminol on a Gold-Nanorod-Modified Gold Electrode", J. Phys. Chem. B, 2006, 110(37), 18408-18414.</li>
+                            <li>G.H. Wan, H. Cui, Y.L Pan, P. Zheng, L.J. Liu, "Determination of quinolones residues in prawn using high-performance liquid chromatography with Ce(IV)-Ru(bpy)(3)(2+)-HNO3 chemiluminescence detection", J. Chromatogr. B, 2006, 843(1),1-9.</li>
+                            <li>M.J. Shi, H. Cui, "Electrochemiluminescence of luminol in dimethyl sulfoxide at a polycrystalline gold electrode", Electrochim. Acta, 2006, 52(3), 1390-1397.</li>
+                        </ol>
+                    </li>
+                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2005</span>
+                        <ol>
+                            <li>H. Cui, Z.F. Zhang, M.J. Shi, Y. Xu, Y.L. Wu, "Light Emission of Gold Nanoparticles Induced by the Reaction of Bis(2,4,6-trichlorophenyl) Oxalate and Hydrogen Peroxide", Anal. Chem., 2005, 77(19), 6402-6406.</li>
+                            <li>H. Cui Z.F. Zhang, M.J. Shi, “Chemiluminescent Reactions Induced by Gold Nanoparticles”, J. Phys. Chem. B, 2005, 109, 3099-3103.</li>
+                            <li>Z.F. Zhang, H. Cui, C.Z. Lai, L.J. Liu, “Gold nanoparticles-catalyzed luminol chemiluminescence and its analytical applications”, Anal. Chem., 2005, 77(10), 3324-3329.</li>
+                            <li>Q.L. Zhang, H. Cui, A. Myint, M. Lian, L.J. Liu, "Sensitive determination of phenolic compounds using high-performance liquid chromatography with cerium(IV)-rhodamine 6G-phenolic compound chemiluminescence detection", J. Chromatogr. A, 2005, 1095(1-2), 94-101.</li>
+                            <li>H.X. Yu, H. Cui, “Comparative studies on the electrochemiluminescence of the luminol system at a copper electrode and a gold electrode under different transient-state electrochemical techniques”, 2005, J. Electroanal. Chem., 2005, 580(1), 1-8.</li>
+                            <li>H. Cui, F. Li, M.J. Shi, Y.Q. Pang, X.Q. Lin, “Inhibition by phenols and anilines of Ru complex electrochemi-luminescence”, Electroanalysis, 2005, 17(7), 589-598.</li>
+                            <li>Y.Q. Pang, H. Cui, S.H. Zheng, G.H. Wan, L.J. Liu, X.F. Yu, “Flow injection analysis of tetracyclines using inhibited Ru(bpy)32+/tripropylamine electrochemiluminescence system”, Luminescence, 2005, 20, 8-15.</li>
+                            <li>H. Xu, C.F. Duan, Z.F. Zhang, J.Y. Chen, C.Z. Lai, M. Lian, L.J. Liu, H. Cui, “Flow injection determination of p-aminophenol at trace level using inhibited luminol-dimethylsulfoxide-NaOH-EDTA chemiluminescence”, Water Res. 2005, 39(23), 396-402.</li>
+                            <li>Q.L. Zhang, M. Lian, L.J. Liu, H. Cui, “High-performance liquid chromatographic assay of parabens in wash-off cosmetic products and foods using chemiluminescence detection.” Anal. Chim. Acta 2005, 527(1-2), 31-39.</li>
+                            <li>Q.L. Zhang, A. Myint, H. Cui, X.W. Ge, L.J. Liu, G.X. Chou, “Determination of cardamonin using a chemiluminescent flow-injection method.” Phytochem. Anal. 2005, 16(6), 440-445.</li>
+                            <li>Q.L. Zhang, H. Cui, "Simultaneous determination of quercetin, kaempferol, and isorhamnetin in phytopharmaceuticals of Hippophae rhamnoides L. by high-performance liquid chromatography with chemiluminescence detection." J. Separation Sci., 2005, 28(11), 1171-1178.</li>
+                            <li>G.H. Wan, H. Cui, H.S. Zheng, L.J. Liu, X.F. Yu, "Determination of tetracyclines residues in honey using high-performance liquid chromatography with potassium permanganate-sodium sulfite-beta-cyclodextrin chemiluminescence detection", 2005, J. Chromatogr. B, 824(1-2), 57-64.</li>
+                        </ol>
+                    </li>
+                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2004</span>
+                        <ol>
+                            <li><a href="http://pubs.acs.org/doi/abs/10.1021/ac049889i">H. Cui*, Y. Xu, Z.F. Zhang, “Multi-channel electrochemiluminescence of luminol in neutral and alkaline aqueous solutions on a gold nanoparticles self-assembled electrode” Anal. Chem., 2004, 76, 13, 4002-4010.</a></li>
+                            <li>H. Cui*, M.J. Shi, R. Meng, J. Zhou, C.Z. Lai, X.Q. Lin, “Effect of pH on inhibition and enhancement of luminol-H2O2-Co2+ chemiluminescence by phenolic compounds and amino acids”, Photochem. Photobiol., 2004, 79, 233-241.</li>
+                            <li>H. Cui*, Z.F. Zhang, G.Z. Zou, X.Q. Lin, “Potential-dependent electrochemiluminescence of luminol in alkaline solution at a gold electrode” J. Electroanal. Chem., 2004, 566, 305-313.</li>
+                            <li>H. Cui*, J. Zhou, F. Xu, C.Z. Lai, G.H. Wan, “Determination of phenolic compounds using high-performance liquid chromatography with Ce4+ -Tween 20 chemiluminescence detection”, Anal. Chim. Acta, 2004, 511, 273-279.</li>
+                            <li>J. Zhou, H. Xu, G.H. Wan, C.F. Duan, H. Cui*, “Enhancing and inhibiting effects of aromatic compounds on luminol-dimethylsulfoxide-OH- system and their analytical application” Talanta, 2004, 64, 467-477.</li>
+                            <li>A. Myint, Q.L. Zhang, L. J. Liu, H. Cui*, “Flow injection-chemiluminescence determination of paraben preservative in food safety” Anal. Chim. Acta, 2004, 517, 119-124.</li>
+                            <li>X.Q. Lin, F. Li, Y.Q. Pang, H. Cui, “Flow injection analysis of gallic acid with inhibited electrochemiluminescence detection” Anal. Bioanal. Chem., 2004, 378, 2028-2033.</li>
+                            <li>J. Zhou, H. Cui*, G.H. Wan, H. Xu, Y.Q. Pang, C.F. Duan, “Direct Analysis of trans-Resveratrol in Red Wine by High Performance Liquid Chromatography with Chemiluminescent Detection”, Food Chemistry, 2004, 88, 613-620.</li>
+                            <li>H.X. Yu, H. Cui*, J.Z. Guo “Multi-channel electrochemiluminescence of luminol at a copper electrode”, Luminescence, 2004, 19, 212-221.</li>
+                            <li>Q.L. Zhang, A. Myint, L.J. Liu, X.W. Ge, H. Cui*, “Flow injection-chemiluminescence determination of puerarin in pharmaceutical preparations”, J. Pharm. Biomed. Anal. 2004, 36, 587-592.</li>
+                            <li>崔华*,张志锋,于宏晓,董永平,“鲁米诺体系的多通道电致化学发光” 世界科技研究与发展, 2004, 26, 75-79.</li>
+                            <li>徐红，赖春泽，廉玫，段春凤，程佳懿，刘丽娟，崔华*, “流动注射化学发光法测定丁香酚”, 发光学报，2004，25，429-434</li>
+
+                        </ol>
+                    </li>
+                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2003</span>
+                        <ol>
+                            <li>H. Cui*, G.Z. Zou, X.Q. Lin, “Electrochemiluminescence of luminol in alkaline solution at a paraffin-impregnated graphite electrode”, Anal. Chem., 2003, 75, 324-331.</li>
+                            <li>C.G. Xie, H. Cui*, “Detection of tannic acid at trace level in industrial wastewaters using a highly sensitive chemiluminescence method” Water Res., 2003, 37, 233-237.</li>
+                            <li>F. Li, X.Q. Lin, H. Cui*, “Determination of noradrenaline and dopamine in pharmaceutical injection samples by inhibition flow injection electrochemiluminescence of ruthenium complexs”, Talanta, 2003, 59, 627-636.</li>
+                            <li>H. Cui*, C.G. Xie, C.Z. Lai, “A novel chemiluminescent method for determination of phloroglucinol”, Luminescence, 2003, 18, 318-323.</li>
+                            <li>H. Cui*, X.Y. Zhao, X.Q. Lin, “Cathodic electrochemiluminescence of Ru(bpy)32+/Nafion coated on graphite oxide electrode in purely aqueous solution”, Luminescence, 2003, 18, 199-202.</li>
+                        </ol>
+                    </li>
+                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2002</span>
+                        <ol>
+                            <li>F. Li, H. Cui*, X.Q. Lin, “Determination of adrenaline by using inhibited Ru(bpy)32+ electrochemiluminescence”, Anal. Chim. Acta, 2002, 471, 187-194.</li>
+                            <li>F. Li, X.Q. Lin, H. Cui*, “Comparative Studies on electrogenerated chemiluminescent and amperometric behaviors of Ru(bpy)32+ system on a paraffin-impregnated graphite electrode and a glassy carbon electrode”, J. Electroanal. Chem., 2002, 534, 91-98.</li>
+                            <li>F. Li, H. Cui*, X.Q. Lin, “Potential-resolved electrochemiluminescence of Ru(bpy)32+/C2O42- system on gold electrode”,  Luminescence, 2002, 17, 117-122.</li>
+                            <li>H. Cui*, S.F. Li, F. Li, Y.G. Sun, X.Q. Lin, “A novel chemiluminescent method for the determination of salicylic acid in bactericidal solutions”, Anal. Bioanal. Chem. 2002, 372, 601-604.</li>
+                            <li>H. Cui, H.M. Hwang, K, Zeng, H. Glover, H.T. Yu, Y.M. Liu, “Riboflavin-photosensitized degradation of atrazine in a freshwater environment” Chemosphere，2002, 47, 991-999.</li>
+                            <li>李凤，林祥钦* ，崔华*, “Ru(bpy)32+-C2O42--PtE体系的两条电致化学发光通道”, 化学学报, 2002, 60, 281-286.</li>
+                            <li>谢成根, 崔华*, 林祥钦, “流动注射化学发光增强法测定健民咽喉片中的没食子酸”, 分析化学, 2002, 30(11), 1316-1318.</li>
+                            <li>晋冠平, 崔华, 林祥钦， 施丽君，“双波长薄层紫外可见光谱电化学测定多巴胺” 理化检验.化学分册, 2002, 38(3), 132</li>
+                        </ol>
+                    </li>
+                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2001</span>
+                        <ol>
+                            <li>H. Cui*, S.F. Li, X.Q. Lin, “Chemiluminescence of Ce (IV) and surfactant Tween 20”, Analyst, 2001, 126, 553-554.</li>
+                            <li>H. Cui, L.S. Wu, J. Chen, X.Q. Lin, “Multi-mode in-situ spectroelectrochemical studies of redox pathways of adrenaline ” J. Electroanal. Chem. 2001, 504, 195-200.</li>
+                            <li>Y.G. Sun, H. Cui, X.Q. Lin, “Study of electrochemiluminescence of lucigenin at a glassy carbon electrode in NaOH solution”, J. Luminescence, 2001, 92(3), 205-211.</li>
+                            <li>H. Cui, H.M. Hwang, S.M. Cook, K, Zeng, “Effect of photosensitizer riboflavin on the fate of 2,4,6-trinitrotoluene in a freshwater environment”, Chemosphere, 2001, 44, 621-625.</li>
+                            <li>李世凤，崔华* ，孙玉刚，林祥钦, “流动注射化学发光增强法测定单宁酸”, 分析化学，2001, 29(3), 333.</li>
+                            <li>孙玉刚，李应会，崔华，林祥钦, 流动注射电致化学发光法测定香烟中的绿原酸, 分析化学, 2001, 29(4), 495.</li>
+                        </ol>
+                    </li>
+                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2000</span>
+                        <ol>
+                            <li>X.Q. Lin, Y.G. Sun, and H. Cui, “Long lasting chemiluminescence of luminol on electrochemically pre-oxidized platinum electrodes in NaOH solution”, Luminescence, 2000, 15, 1-6.</li>
+                            <li>Y. G. Sun, H. Cui, Y. H. Li, H. Zhao, X. Q. Lin, “ Flow injection analysis of tannic acid with inhibited electrochemiluminescent detection” Anal. Lett., 2000, 33(11), 2281-2291.</li>
+                            <li>Y. G. Sun, H. Cui, X. Q. Lin, Y. H. Li, H. Z. Zhao, “Flow injection analysis of pyrogallol with enhanced electrochemiluminescence detection,”, Anal. Chim. Acta, 2000, 423(2), 247-253.</li>
+                            <li>Y. G. Sun, H. Cui, Y. H. Li, X. Q. Lin, “Determination of some catechol derivatives by a flow injection electrochemiluminescent inhibition method,” Talanta, 2000, 53(3), 661-666.</li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- 学位论文列表 -->
+            <div style="margin-top: 25px; display: none;" id="graduate_paper_list" >
+                <h2>化学发光与电致化学发光实验室</h2>
+                <h2>学位论文列表</h2>
+                <hr color="black" width="60%">
+                <br>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="tab2010-2014" data-toggle="tab" href="#year2010-2014" role="tab" aria-controls="year2010-2014"
+                        aria-selected="true">2014->2010</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="tab2005-2009" data-toggle="tab" href="#year2005-2009" role="tab" aria-controls="year2005-2009"
+                        aria-selected="false">2009->2005</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="tab1999-2004" data-toggle="tab" href="#year1999-2004" role="tab" aria-controls="year1999-2004"
+                        aria-selected="false">2004->1999</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                      <!-- 2010-2014学位论文列表 -->
+                    <div class="tab-pane fade show active" id="year2010-2014" role="tabpanel" aria-labelledby="tab2010-2014">
+                        <div style="margin-top: 25px;">
+                            <ul>
+                                <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2014</span>
+                                    <ul>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">张宏丽</span>
+                                            <ul>
+                                                <li>2014年6月 博士毕业</li>
+                                                <li>毕业论文题目：N-(4-氨基丁基)-乙基异鲁米诺功能化纳米材料的合成、发光性质及分析应用研究</li>
+                                                <li>毕业去向：中国地质科学院郑州矿产综合利用研究所</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">何毅</span>
+                                            <ul>
+                                                <li>2014年6月 博士毕业</li>
+                                                <li>毕业论文题目：化学发光功能化纳米材料的合成及其在生物分析与分子逻辑中的应用研究</li>
+                                                <li>毕业去向：西南科技大学</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">于秀霞</span>
+                                            <ul>
+                                                <li>2014年6月 博士毕业</li>
+                                                <li>毕业论文题目：化学发光功能化纳米材料在新型生物传感器中的应用</li>
+                                                <li>毕业去向：山东大学（威海分校）</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">刘丹卿</span>
+                                            <ul>
+                                                <li>2014年6月 硕士毕业</li>
+                                                <li>毕业论文题目：N-(4-氨基丁基)-N-乙基异鲁米诺和血红素双功能化石墨烯材料的合成及化学发光的研究</li>
+                                                <li>毕业去向：华威大学</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2013</span>
+                                    <ul>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">俞玉琪</span>
+                                            <ul>
+                                                <li>2013年6月 博士毕业</li>
+                                                <li>毕业论文题目：钌配合物功能化纳米材料及其在化学发光生物分析中的应用</li>
+                                                <li>毕业去向：</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">蒋杰</span>
+                                            <ul>
+                                                <li>2013年6月 博士毕业</li>
+                                                <li>毕业论文题目：发光功能化纳米材料在结核病诊断化学发光核酸传感器中的应用</li>
+                                                <li>毕业去向：昆山中石化</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">李师圆</span>
+                                            <ul>
+                                                <li>2013年6月 硕士毕业</li>
+                                                <li>毕业论文题目：一种无标记通用化学发光新方法及其在测定适配体-目标物结合常数、结合位点和目标物浓度中的应用</li>
+                                                <li>毕业去向：冀北电力研究院</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2012</span>
+                                    <ul>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">沈雯</span>
+                                            <ul>
+                                                <li>2012年6月 博士毕业</li>
+                                                <li>毕业论文题目：发光功能化纳米材料及其在化学发光免疫分析中的应用</li>
+                                                <li>毕业去向：上海专利事务所</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">柴颖</span>
+                                            <ul>
+                                                <li>2012年6月 博士毕业</li>
+                                                <li>毕业论文题目：基于发光功能化纳米金核酸分析探针的新型电致化学发光传感器</li>
+                                                <li>毕业去向：呼和浩特烟厂</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li  class="text-left"> <span style="font-weight: bold;font-size: x-large;">2011</span>
+                                    <ul>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">田大勇</span>
+                                            <ul>
+                                                <li>2011年6月 博士毕业</li>
+                                                <li>毕业论文题目：鲁米诺及衍生物功能化的金纳米材料及其在化学发光生物分析中的应用</li>
+                                                <li>毕业去向：国家烟草总局</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2010</span>
+                                    <ul>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">张昊</span>
+                                            <ul>
+                                                <li>2010年6月 博士毕业</li>
+                                                <li>毕业论文题目：吖啶类化合物电致化学发光及离子液体功能化纳米复合材料的研究</li>
+                                                <li>毕业去向：</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">李娜</span>
+                                            <ul>
+                                                <li>2010年6月 博士毕业</li>
+                                                <li>毕业论文题目：金属纳米粒子参与的化学发光及其在高效液相色谱分析中的应用研究</li>
+                                                <li>毕业去向：中国广州分析测试中心</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">刘博</span>
+                                            <ul>
+                                                <li>2010年6月 硕士毕业</li>
+                                                <li>毕业论文题目：金属铂纳米催化的光泽精化学发光新体系及其应用</li>
+                                                <li>毕业去向：中国建设银行深圳分行</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">刘春竹</span>
+                                            <ul>
+                                                <li>2010年6月 硕士毕业</li>
+                                                <li>毕业论文题目：金纳米棒的组装、复合纳米结构的合成及化学发光的研究</li>
+                                                <li>毕业去向：</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">顾洁</span>
+                                            <ul>
+                                                <li>2010年6月 本科毕业</li>
+                                                <li>毕业论文题目：基于发光功能化纳米探针的核酸适配体PDGF传感器的研究</li>
+                                                <li>毕业去向：Dartmouth College</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">李芳</span>
+                                            <ul>
+                                                <li>2010年6月 本科毕业</li>
+                                                <li>毕业论文题目：发光功能化蝌蚪状纳米金材料的合成和性质研究</li>
+                                                <li>毕业去向：本实验室硕博</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 2005-2009学位论文列表 -->
+                    <div class="tab-pane fade" id="year2005-2009" role="tabpanel" aria-labelledby="tab2005-2009">
+                        <div style="margin-top: 25px;">
+                            <ul>
+                                <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2009</span>
+                                    <ul>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">段春凤</span>
+                                            <ul>
+                                                <li>2009年7月 博士毕业</li>
+                                                <li>毕业论文题目：金属纳米诱导的化学发光体系的设计及在免疫分析中的应用</li>
+                                                <li>毕业去向：中科院大连化学物理研究所（大连）</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">张宏丽</span>
+                                            <ul>
+                                                <li>2009年7月 本科毕业</li>
+                                                <li>毕业论文题目：</li>
+                                                <li>毕业去向：本实验室硕博</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">郑宇</span>
+                                            <ul>
+                                                <li>2009年7月 本科毕业</li>
+                                                <li>毕业论文题目：</li>
+                                                <li>毕业去向：</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">范震</span>
+                                            <ul>
+                                                <li>2009年7月 本科毕业</li>
+                                                <li>毕业论文题目：</li>
+                                                <li>毕业去向：</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">王伟</span>
+                                            <ul>
+                                                <li>2009年1月 博士毕业</li>
+                                                <li>毕业论文题目：功能化金纳米材料的合成、性质及其在化学发光传感器中的应用研究</li>
+                                                <li>毕业去向：北京化工研究院（北京</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2008</span>
+                                    <ul>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">俞玉琪</span>
+                                            <ul>
+                                                <li>2008年6月 本科毕业</li>
+                                                <li>毕业论文题目：纳米金-硝酸银-鲁米诺发光体系的免疫分析研究 （优秀本科毕业论文）</li>
+                                                <li>毕业去向：本实验室硕博</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">蒋 杰</span>
+                                            <ul>
+                                                <li>2008年6月 本科毕业</li>
+                                                <li>毕业论文题目：纳米铂催化的光泽精－NaOH化学发光及其分析应用 </li>
+                                                <li>毕业去向：本实验室硕博</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">夏思敏</span>
+                                            <ul>
+                                                <li>2008年6月 本科毕业</li>
+                                                <li>毕业论文题目：银钯合金纳米催化的液相化学发光体系</li>
+                                                <li>毕业去向：中科院大连化学物理研究所硕博</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">杨 旋</span>
+                                            <ul>
+                                                <li>2008年6月 本科毕业</li>
+                                                <li>毕业论文题目：纳米金-鲁米诺-硝酸银化学发光体系测定DNA </li>
+                                                <li>毕业去向：中科院长春应用化学研究所硕博</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2007</span>
+                                    <ul>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">董永平</span>
+                                            <ul>
+                                                <li>2007年3月 博士毕业</li>
+                                                <li>毕业论文题目：金纳米粒子与碳纳米管修饰电极上的电致化学发光</li>
+                                                <li>毕业去向：安徽工业大学（马鞍山）</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">郭吉兆</span>
+                                            <ul>
+                                                <li>2007年6月 博士毕业</li>
+                                                <li>毕业论文题目：贵金属纳米粒子参与的化学发光</li>
+                                                <li>毕业去向：郑州烟草研究院（郑州）</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">刘丽佳</span>
+                                            <ul>
+                                                <li>2007年7月 本科毕业</li>
+                                                <li>毕业论文题目：纳米金-硝酸银-鲁米诺化学发光体系的分析应用研究</li>
+                                                <li>毕业去向：</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">熊涛</span>
+                                            <ul>
+                                                <li>2007年7月 本科毕业</li>
+                                                <li>毕业论文题目：</li>
+                                                <li>毕业去向：</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2006</span>
+                                    <ul>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">石明娟</span>
+                                            <ul>
+                                                <li>2006年8月 博士毕业</li>
+                                                <li>毕业论文题目：水相中荧光素和有机相中鲁米诺、光泽精的电位分辨电致化学发光及鲁米诺化学发光的增强和抑制作用研究</li>
+                                                <li>毕业去向：中国计量学院（杭州）</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">徐胜良</span>
+                                            <ul>
+                                                <li>2006年7月 硕士毕业</li>
+                                                <li>毕业论文题目：金属纳米粒子催化的鲁米诺化学发光及其应用</li>
+                                                <li>毕业去向：中国航天集团第四研究院（襄樊）</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">王成名</span>
+                                            <ul>
+                                                <li>2006年7月 硕士毕业</li>
+                                                <li>毕业论文题目：中性和碱性鲁米诺体系在纳米银修饰电极上的多通道电致化学发光</li>
+                                                <li>毕业去向：中国科技大学理化科学实验中心</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">刘 博</span>
+                                            <ul>
+                                                <li>2006年6月 本科毕业</li>
+                                                <li>毕业论文题目：Rhodamine B包裹的纳米金制备及对鲁米诺－H2O2化学发光的影响 （优秀本科毕业论文）</li>
+                                                <li>毕业去向：本实验室读博</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">石云波</span>
+                                            <ul>
+                                                <li>2006年6月 本科毕业</li>
+                                                <li>毕业论文题目：鲁米诺－过氧化氢－纳米金化学发光体系测定左旋多巴</li>
+                                                <li>毕业去向：University of Maryland, College Park （USA）</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">周 伟</span>
+                                            <ul>
+                                                <li>2006年6月 本科毕业</li>
+                                                <li>毕业论文题目：纳米银以及金银合金催化的液相化学发光</li>
+                                                <li>毕业去向：University of California, Davis （USA）</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2005</span>
+                                    <ul>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">于宏晓</span>
+                                            <ul>
+                                                <li>2005年12月 博士毕业</li>
+                                                <li>毕业论文题目：各种暂态电化学技术下和有机相中电位分辨的电致化学发光</li>
+                                                <li>毕业去向：将军集团（济南）</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">万国晖</span>
+                                            <ul>
+                                                <li>2005年12月 博士毕业</li>
+                                                <li>毕业论文题目：食品中抗生素残留的高效液相色谱化学发光检测法</li>
+                                                <li>毕业去向：北京化工研究院（北京</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">张志锋</span>
+                                            <ul>
+                                                <li>2005年6月 博士毕业</li>
+                                                <li>毕业论文题目：纳米金参与的液相化学发光</li>
+                                                <li>毕业去向：国家海洋环境监测中心（大连）</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">张群林</span>
+                                            <ul>
+                                                <li>2005年6月 博士毕业</li>
+                                                <li>毕业论文题目：硫酸铈(IV)-罗丹明6G-酚类化合物体系化学发光及其分析应用</li>
+                                                <li>毕业去向：安徽医科大学</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">庞永强</span>
+                                            <ul>
+                                                <li>2005年6月 硕士毕业</li>
+                                                <li>毕业论文题目：电致化学发光在食品安全检测中的应用</li>
+                                                <li>毕业去向：国家烟草质量监督检验中心（郑州）</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">高仲栋</span>
+                                            <ul>
+                                                <li>2005年6月 本科毕业</li>
+                                                <li>毕业论文题目：纳米金胶在luminol－铁氰化钾液相化学发光体系中的催化作用</li>
+                                                <li>毕业去向：</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">吴云龙</span>
+                                            <ul>
+                                                <li>2005年6月 本科毕业</li>
+                                                <li>毕业论文题目:纳米金合成过程中的化学发光现象</li>
+                                                <li>毕业去向：</li>
+                                            </ul>
+                                        </li>
+                                        <li class="text-left"> <span style="font-weight: bold;font-size:large;">潘怡兰</span>
+                                            <ul>
+                                                <li>2005年6月 本科毕业</li>
+                                                <li>毕业论文题目：高效液相色谱－化学发光法测定喹诺酮类物质</li>
+                                                <li>毕业去向：香港大学（香港）</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 1999-2004年论文列表 -->
+                    <div class="tab-pane fade" id="year1999-2004" role="tabpanel" aria-labelledby="tab1999-2004">
+                            <div style="margin-top: 25px;">
+                                <ul>
+                                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2004</span>
+                                        <ul>
+                                            <li class="text-left"> <span style="font-weight: bold;font-size:large;">周 建</span>
+                                                <ul>
+                                                    <li>2004年6月 博士毕业</li>
+                                                    <li>毕业论文题目：高效液相色谱化学发光联用技术</li>
+                                                    <li>毕业去向：北京莱伯泰科仪器公司（北京）</li>
+                                                </ul>
+                                            </li>
+                                            <li class="text-left"> <span style="font-weight: bold;font-size:large;">Aung Myint</span>（留学生）
+                                                <ul>
+                                                    <li>2004年6月 博士毕业</li>
+                                                    <li>毕业论文题目：Enhancement and inhibition by organic compounds of some chemiluminescent systems and their analytical applications in food safety</li>
+                                                    <li>毕业去向：Myanmar Foodstuff Industries（缅甸）</li>
+                                                </ul>
+                                            </li>
+                                            <li class="text-left"> <span style="font-weight: bold;font-size:large;">徐 杨</span>
+                                                <ul>
+                                                    <li>2004年6月 硕士毕业</li>
+                                                    <li>毕业论文题目：中性和碱性鲁米诺体系在纳米金修饰电极上的多通道电致化学发光</li>
+                                                    <li>毕业去向：开发银行安徽分行（合肥）</li>
+                                                </ul>
+                                            </li>
+                                            <li class="text-left"> <span style="font-weight: bold;font-size:large;">赖春泽</span>
+                                                <ul>
+                                                    <li>2004年6月 本科毕业</li>
+                                                    <li>毕业论文题目：纳米金对Luminol-H2O2发光体系的影响及其分析应用</li>
+                                                    <li>毕业去向：</li>
+                                                </ul>
+                                            </li>
+                                            <li class="text-left"> <span style="font-weight: bold;font-size:large;">段春凤</span>
+                                                <ul>
+                                                    <li>2004年6月 本科毕业</li>
+                                                    <li>毕业论文题目：B-Z反应的化学发光研究 （优秀本科毕业论文）</li>
+                                                    <li>毕业去向：本实验室读研</li>
+                                                    <li>注：本文系崔华教授与刘光明副教授共同指导完成</li>
+                                                </ul>
+                                            </li>
+                                            <li class="text-left"> <span style="font-weight: bold;font-size:large;">廉 玫</span>
+                                                <ul>
+                                                    <li>2004年6月 本科毕业</li>
+                                                    <li>毕业论文题目：高效液相色谱－化学发光法测定化妆品中对羟基苯甲酸酯类化合物</li>
+                                                    <li>毕业去向：大连化物所读研</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2003</span>
+                                        <ul>
+                                            <li class="text-left"> <span style="font-weight: bold;font-size:large;">程佳懿</span>
+                                                <ul>
+                                                    <li>2003年6月 本科毕业</li>
+                                                    <li>毕业论文题目：对氨基酚及丁香酚的流动注射化学发光抑制分析法</li>
+                                                    <li>毕业去向：上海有机所读研</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2002</span>
+                                        <ul>
+                                            <li class="text-left"> <span style="font-weight: bold;font-size:large;">李 凤</span>
+                                                <ul>
+                                                    <li>2002年10月 博士毕业</li>
+                                                    <li>毕业论文题目：联吡啶-钌体系电位分辨的电致化学发光</li>
+                                                    <li>毕业去向：</li>
+                                                    <li>注：本文系林祥钦教授与崔华教授共同指导完成</li>
+                                                </ul>
+                                            </li>
+                                            <li class="text-left"> <span style="font-weight: bold;font-size:large;">邹桂征</span>
+                                                <ul>
+                                                    <li>2002年6月 硕士毕业</li>
+                                                    <li>毕业论文题目：鲁米诺在几种电极材料上电位分辨电致化学发光的比较研究</li>
+                                                    <li>毕业去向：南京大学（南京）</li>
+                                                </ul>
+                                            </li>
+                                            <li class="text-left"> <span style="font-weight: bold;font-size:large;">谢成根</span>
+                                                <ul>
+                                                    <li>2002年11月 硕士毕业</li>
+                                                    <li>毕业论文题目：有机物对鲁米诺－铁氰化钾化学发光体系的增强和抑制作用及其分析应用</li>
+                                                    <li>毕业去向：</li>
+                                                </ul>
+                                            </li>
+                                            <li class="text-left"> <span style="font-weight: bold;font-size:large;">赵晓宇</span>
+                                                <ul>
+                                                    <li>2002年6月 硕士毕业</li>
+                                                    <li>毕业论文题目：联吡啶钌－Nafion修饰电极上电位分辨的电致化学发光</li>
+                                                    <li>毕业去向：国家知识产权局（北京）</li>
+                                                </ul>
+                                            </li>
+                                            <li class="text-left"> <span style="font-weight: bold;font-size:large;">许 峰</span>
+                                                <ul>
+                                                    <li>2002年6月 本科毕业</li>
+                                                    <li>毕业论文题目：多酚类化合物的液相色谱化学发光分析法</li>
+                                                    <li>毕业去向：大连化物所读研</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2001</span>
+                                        <ul>
+                                            <li class="text-left"> <span style="font-weight: bold;font-size:large;">李世凤</span>
+                                                <ul>
+                                                    <li>2001年2月 硕士毕业</li>
+                                                    <li>毕业论文题目：酚酸类化合物化学发光分析法的研</li>
+                                                    <li>毕业去向：安徽师范大学</li>
+                                                    <li>注：本文系崔华教授和林祥钦教授共同指导完成</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">2000</span>
+                                        <ul>
+                                            <li class="text-left"> <span style="font-weight: bold;font-size:large;">孙玉刚</span>
+                                                <ul>
+                                                    <li>2000年12月 博士毕业</li>
+                                                    <li>毕业论文题目：电位分辨的电致化学发光</li>
+                                                    <li>毕业去向：University of Washington (USA)</li>
+                                                    <li>注：本文系林祥钦教授和崔华教授共同指导完成</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="text-left"> <span style="font-weight: bold;font-size: x-large;">1999及以前</span>
+                                        <ul>
+                                            <li class="text-left"> <span style="font-weight: bold;font-size:large;">贺彩霞</span>
+                                                <ul>
+                                                    <li>1998年 博士毕业</li>
+                                                    <li>毕业论文题目：流动体系中多酚类物质的化学发光抑制作用及应用</li>
+                                                    <li>毕业去向：</li>
+                                                    <li>注：本文系赵贵文教授与崔华教授共同指导完成</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+            </div>
+    </div>
+
+     <script>
+        //  近期发布的论文数据
+        // 添加新内容请添加到下标为0的元素上
+         var academicPaperData = [
+             {title:'Weijun Kong, Qi Li, Wei Wang, Xiaoning Zhao, Shenglong Jiang, Tianhua Zheng, Qun Zhang, Wen Shen, and Hua Cui "Rational design of functional materials guided by single particle chemiluminescence imaging", Chem. Sci., 2019, 10, 5444',
+             link:'https://pubs.rsc.org/en/content/articlehtml/2019/sc/c9sc00954j'},
+             {title:'Jiangnan Shu, Zhili Han, and Hua Cui, “Highly chemiluminescent TiO2/tetra(4-carboxyphenyl)porphyrin/N-(4-aminobutyl)-N-ethylisoluminol nanoluminophores for detection of heart disease biomarker copeptin based on chemiluminescence resonance energy transfer”, Anal Bioanal Chem., 2019, 1618-2650',
+             link:'https://link.springer.com/article/10.1007/s00216-019-01821-2'},
+         ]
+        //  将论文数据填入列表中
+        var ol = document.getElementById('newpaper');
+
+        academicPaperData.forEach(function(value){
+            var li = document.createElement('li');
+            var a = document.createElement('a')
+
+            li.appendChild(a);
+            a.setAttribute('href',value.link);
+            a.appendChild(document.createTextNode(value.title));
+            ol.appendChild(li);
+            
+
+        });
+
+        // 学术论文学位论文页面切换
+        $(function(){
+            $('#to_academic').click(function(){
+                $('#to_academic').css("color","grey")
+                $('#to_graduate').css("color","black")
+                $('#academic_paper_list').show();
+                $('#graduate_paper_list').hide();
+            })
+        });
+
+        $(function(){
+            $('#to_graduate').click(function(){
+                $('#to_academic').css("color","black")
+                $('#to_graduate').css("color","grey")
+                $('#academic_paper_list').hide();
+                $('#graduate_paper_list').show();
+            })
+        });
+     </script>
+
+</body>
+</html>
